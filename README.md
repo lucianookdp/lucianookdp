@@ -1,9 +1,9 @@
 # Luciano K.
 
-**🎓 Último ano de Engenharia de Software**  
-⚙️ Criador da [Ludall Digital Solutions](https://www.ludalldigital.com.br)
+**🎓 Software Engineering student**  
+⚙️ Founder [Ludall Digital Solutions](https://www.ludalldigital.com.br)
 
-## 💻 Linguagens de Programação
+## 💻 Languages
 <p align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" height="40" title="C" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" height="40" title="C++" />
@@ -14,7 +14,7 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" height="40" title="Dart" />
 </p>
 
-## 🛠️ Bibliotecas & Frameworks
+## 🛠️ Libraries, Frameworks & Databases
 <p align="center">
   <img src="https://api.iconify.design/logos:react.svg" height="40" title="React" />
   <img src="https://api.iconify.design/logos:laravel.svg" height="40" title="Laravel" />
@@ -34,3 +34,4 @@
   <img src="https://github-readme-stats.vercel.app/api?username=lucianookdp&show_icons=true&theme=radical" height="150" />
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=lucianookdp&layout=compact&theme=radical" height="150" />
 </p>
+
