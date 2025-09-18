@@ -1,7 +1,6 @@
 # Luciano K.
 
 **🎓 Software Engineering student**  
-⚙️ Founder [Ludall Digital Solutions](https://www.ludalldigital.com.br)
 
 ## 💻 Languages
 <p align="center">
