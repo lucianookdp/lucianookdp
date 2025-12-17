@@ -1,6 +1,6 @@
 # Luciano K.
 
-**🎓 Software Engineering student**  
+**Software Engineer**  
 
 ## 💻 Languages
 <p align="center">
