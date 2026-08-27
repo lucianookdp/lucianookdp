@@ -1,7 +1,7 @@
 <h1 align="center">Luciano K. Dal Pai</h1>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&pause=1200&color=1E8E56&center=true&vCenter=true&width=460&lines=Software+engineer+%26+full-stack+developer;Building+things+for+the+web;Always+learning+something+new" alt="Typing SVG" />
+  <img src="assets/header.svg" alt="Software engineer & full-stack developer" />
 </p>
 
 <p align="center">

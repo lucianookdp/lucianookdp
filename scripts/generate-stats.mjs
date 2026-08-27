@@ -304,6 +304,55 @@ function terminalCard(topLanguage) {
 </svg>`;
 }
 
+// Self-hosted replacement for the readme-typing-svg.demolab.com widget,
+// which occasionally renders with overlapping lines (third-party bug).
+// Plain centered text, no window chrome, types once and ends on a cursor.
+function headerCard(tagline) {
+  const width = 460;
+  const height = 40;
+  const fontSize = 16;
+  const charW = 9.4;
+  const textWidth = tagline.length * charW;
+  const startX = (width - textWidth) / 2;
+  const y = height / 2 + fontSize / 3;
+
+  const lineDefs = [
+    {
+      y,
+      width: textWidth + CLIP_PAD,
+      render: `<text x="${startX.toFixed(1)}" y="${y}" font-size="${fontSize}" fill="${ACCENT}">${escapeXml(tagline)}</text>`,
+      clipX: startX,
+    },
+  ];
+
+  let prevId = "winIn";
+  const clipDefs = [];
+  const rendered = [];
+  let lastId = prevId;
+  lineDefs.forEach((line, i) => {
+    const id = `hrev${i}`;
+    const dur = Math.max(0.3, line.width / PX_PER_SEC).toFixed(2);
+    clipDefs.push(`<clipPath id="hclip${i}"><rect x="${line.clipX.toFixed(1)}" y="${line.y - fontSize}" width="0" height="${fontSize + 8}">
+      <animate id="${id}" attributeName="width" from="0" to="${line.width.toFixed(0)}" dur="${dur}s" begin="${prevId}.end" fill="freeze" calcMode="linear" />
+    </rect></clipPath>`);
+    rendered.push(`<g clip-path="url(#hclip${i})">${line.render}</g>`);
+    prevId = id;
+    lastId = id;
+  });
+
+  const last = lineDefs[0];
+  const cursor = blinkCursor(last.clipX + last.width - CLIP_PAD + 4, y, lastId);
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" font-family="'Cascadia Code', 'Fira Code', Consolas, monospace">
+  <defs>
+    ${clipDefs.join("\n    ")}
+  </defs>
+  <animate id="winIn" attributeName="opacity" from="1" to="1" dur="0.01s" begin="0s" fill="freeze" />
+  ${rendered.join("\n  ")}
+  ${cursor}
+</svg>`;
+}
+
 // ---- Quote of the day (day-of-year -> fixed quote, no randomness) ----
 
 function dayOfYear(date) {
@@ -415,6 +464,7 @@ async function main() {
   await fs.writeFile("assets/stats.svg", statsCard(statsData));
   await fs.writeFile("assets/top-langs.svg", topLangsCard(languageTotals));
   await fs.writeFile("assets/streak.svg", streakCard(streakData));
+  await fs.writeFile("assets/header.svg", headerCard("Software engineer & full-stack developer"));
 
   const [topLanguage] = [...languageTotals.entries()].sort((a, b) => b[1] - a[1])[0] || ["N/A"];
   await fs.writeFile("assets/terminal.svg", terminalCard(topLanguage));
