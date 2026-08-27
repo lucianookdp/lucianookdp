@@ -7,12 +7,12 @@
   </style>
   <text x="20" y="28" class="title">Most Used Languages</text>
   <rect x="20" y="48" width="315" height="8" rx="4" fill="#1f1f1f" />
-  <rect x="20" y="48" width="126.83189857777897" height="8" fill="#1e8e56" />
-  <rect x="146.831898577779" y="48" width="62.792468540578284" height="8" fill="#3fb27f" />
-  <rect x="209.62436711835727" y="48" width="38.39452867944293" height="8" fill="#6fcf9e" />
-  <rect x="248.0188957978002" y="48" width="33.75800754757524" height="8" fill="#a3e0bf" />
-  <rect x="281.77690334537544" y="48" width="27.454103490417804" height="8" fill="#e6e6e6" />
-  <rect x="309.23100683579327" y="48" width="25.768993164206766" height="8" fill="#8a8a8a" />
+  <rect x="20" y="48" width="127.06614270293747" height="8" fill="#1e8e56" />
+  <rect x="147.06614270293747" y="48" width="62.71430031361177" height="8" fill="#3fb27f" />
+  <rect x="209.78044301654924" y="48" width="38.34673262520519" height="8" fill="#6fcf9e" />
+  <rect x="248.12717564175443" y="48" width="33.71598334216897" height="8" fill="#a3e0bf" />
+  <rect x="281.8431589839234" y="48" width="27.419926802628975" height="8" fill="#e6e6e6" />
+  <rect x="309.2630857865524" y="48" width="25.73691421344762" height="8" fill="#8a8a8a" />
   <circle cx="20" cy="76" r="5" fill="#1e8e56" /><text x="32" y="80" class="label">JavaScript <tspan fill="#8a8a8a">40.3%</tspan></text>
   <circle cx="190" cy="76" r="5" fill="#3fb27f" /><text x="202" y="80" class="label">PHP <tspan fill="#8a8a8a">19.9%</tspan></text>
   <circle cx="20" cy="98" r="5" fill="#6fcf9e" /><text x="32" y="102" class="label">CSS <tspan fill="#8a8a8a">12.2%</tspan></text>
