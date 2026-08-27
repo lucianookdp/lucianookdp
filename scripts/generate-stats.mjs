@@ -142,7 +142,14 @@ function card({ title, width, height, body }) {
 </svg>`;
 }
 
-function statsCard({ repos, stars, followers, contributions }) {
+function statsCardHeight() {
+  return 56 + 4 * 26 - 4;
+}
+
+// `minHeight` lets this be matched to topLangsCard's height so the two
+// sit flush when GitHub places them side by side (GitHub strips inline
+// `style="vertical-align"`, so equal SVG heights is the only reliable fix).
+function statsCard({ repos, stars, followers, contributions }, minHeight) {
   const rows = [
     ["Total repositories", repos],
     ["Total stars", stars],
@@ -155,10 +162,16 @@ function statsCard({ repos, stars, followers, contributions }) {
       return `<text x="20" y="${y}" class="label">${escapeXml(label)}</text><text x="335" y="${y}" text-anchor="end" class="value">${escapeXml(value)}</text>`;
     })
     .join("\n  ");
-  return card({ title: "GitHub Stats", width: 355, height: 56 + rows.length * 26 - 4, body });
+  const height = Math.max(statsCardHeight(), minHeight || 0);
+  return card({ title: "GitHub Stats", width: 355, height, body });
 }
 
-function topLangsCard(totals) {
+function topLangsCardHeight(totals) {
+  const rows = Math.ceil(Math.min(totals.size, 6) / 2);
+  return 80 + rows * 22 - 6;
+}
+
+function topLangsCard(totals, minHeight) {
   const sorted = [...totals.entries()].sort((a, b) => b[1] - a[1]).slice(0, 6);
   const total = sorted.reduce((sum, [, bytes]) => sum + bytes, 0);
   const palette = ["#1e8e56", "#3fb27f", "#6fcf9e", "#a3e0bf", FG, MUTED];
@@ -186,8 +199,7 @@ function topLangsCard(totals) {
     })
     .join("\n  ");
 
-  const rows = Math.ceil(sorted.length / 2);
-  const height = 80 + rows * 22 - 6;
+  const height = Math.max(topLangsCardHeight(totals), minHeight || 0);
   const body = `${track}\n  ${segments}\n  ${legend}`;
   return card({ title: "Most Used Languages", width: 355, height, body });
 }
@@ -402,8 +414,9 @@ async function main() {
   const statsData = { repos: repos.length, stars, followers, contributions: totalContributions };
   const streakData = { current, longest };
 
-  await fs.writeFile("assets/stats.svg", statsCard(statsData));
-  await fs.writeFile("assets/top-langs.svg", topLangsCard(languageTotals));
+  const matchedHeight = Math.max(statsCardHeight(), topLangsCardHeight(languageTotals));
+  await fs.writeFile("assets/stats.svg", statsCard(statsData, matchedHeight));
+  await fs.writeFile("assets/top-langs.svg", topLangsCard(languageTotals, matchedHeight));
   await fs.writeFile("assets/streak.svg", streakCard(streakData));
   await fs.writeFile("assets/header.svg", headerCard("Software engineer & full-stack developer"));
 

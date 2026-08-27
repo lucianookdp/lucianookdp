@@ -50,8 +50,8 @@
 ## GitHub stats
 
 <p align="center">
-  <img src="assets/stats.svg" alt="GitHub stats" style="vertical-align: top" />
-  <img src="assets/top-langs.svg" alt="Top languages" style="vertical-align: top" />
+  <img src="assets/stats.svg" alt="GitHub stats" />
+  <img src="assets/top-langs.svg" alt="Top languages" />
 </p>
 
 <p align="center">
