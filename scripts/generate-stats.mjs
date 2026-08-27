@@ -354,16 +354,12 @@ function headerCard(tagline) {
     lastId = id;
   });
 
-  const last = lineDefs[0];
-  const cursor = blinkCursor(last.clipX + last.width - CLIP_PAD + 4, y, lastId);
-
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" font-family="'Cascadia Code', 'Fira Code', Consolas, monospace">
   <defs>
     ${clipDefs.join("\n    ")}
   </defs>
   <rect width="0" height="0"><animate id="hdrWinIn" attributeName="width" from="0" to="0" dur="0.01s" begin="0s" fill="freeze" /></rect>
   ${rendered.join("\n  ")}
-  ${cursor}
 </svg>`;
 }
 

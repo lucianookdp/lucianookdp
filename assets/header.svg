@@ -6,7 +6,4 @@
   </defs>
   <rect width="0" height="0"><animate id="hdrWinIn" attributeName="width" from="0" to="0" dur="0.01s" begin="0s" fill="freeze" /></rect>
   <g clip-path="url(#hclip0)"><text x="42.0" y="25.333333333333332" font-size="16" fill="#1e8e56">Software engineer &amp; full-stack developer</text></g>
-  <rect x="422" y="13.333333333333332" width="7" height="14" fill="#1e8e56" opacity="0">
-    <animate attributeName="opacity" values="1;0" calcMode="discrete" dur="1s" begin="hrev0.end" repeatCount="indefinite" />
-  </rect>
 </svg>
