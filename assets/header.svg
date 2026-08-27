@@ -1,4 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="460" height="40" viewBox="0 0 460 40" font-family="'Cascadia Code', 'Fira Code', Consolas, monospace">
-  <text x="42.0" y="25.333333333333332" font-size="16" fill="#1e8e56">Software engineer &amp; full-stack developer</text>
-  <rect x="422" y="13.333333333333332" width="7" height="14" fill="#1e8e56" />
+  <defs>
+    <clipPath id="hclip0"><rect x="42.0" y="9.333333333333332" width="0" height="24">
+      <animate id="hrev0" attributeName="width" from="0" to="406" dur="1.27s" begin="hdrWinIn.end" fill="freeze" calcMode="linear" />
+    </rect></clipPath>
+  </defs>
+  <rect width="0" height="0"><animate id="hdrWinIn" attributeName="width" from="0" to="0" dur="0.01s" begin="0s" fill="freeze" /></rect>
+  <g clip-path="url(#hclip0)"><text x="42.0" y="25.333333333333332" font-size="16" fill="#1e8e56">Software engineer &amp; full-stack developer</text></g>
+  <rect x="422" y="13.333333333333332" width="7" height="14" fill="#1e8e56" opacity="0">
+    <animate attributeName="opacity" values="1;0" calcMode="discrete" dur="1s" begin="hrev0.end" repeatCount="indefinite" />
+  </rect>
 </svg>

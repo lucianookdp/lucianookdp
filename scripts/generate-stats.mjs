@@ -221,7 +221,9 @@ function streakCard({ current, longest }) {
 
 // ---- Windows Terminal (PowerShell) card ----
 
-const CHAR_W = 8.3; // approx monospace advance at font-size 13 (generous for cursor placement)
+const CHAR_W = 8.3; // approx monospace advance at font-size 13 (generous for font fallback)
+const PX_PER_SEC = 320; // typing speed
+const CLIP_PAD = 30; // safety margin so the last glyph never gets clipped
 const PROMPT_STR = "PS C:\\Users\\luciano>";
 
 function windowsChrome({ width, titleText }) {
@@ -239,16 +241,32 @@ function windowsChrome({ width, titleText }) {
     <line x1="${width - 13}" y1="10" x2="${width - 24}" y2="21" stroke="${MUTED}" stroke-width="1.2" />`;
 }
 
-// GitHub renders these SVGs as <img> sources, and Chrome does not run SMIL
-// animations for SVG-as-<img> content (it freezes on the very first frame).
-// So every line is just rendered fully visible right away — no clip-path
-// reveal, no fade-in — matching exactly what actually shows up in the README.
-function renderLines(lineDefs) {
-  return lineDefs.map((line) => line.render).join("\n  ");
+// Builds the SMIL clip-path chain that reveals each line of `lineDefs`
+// (each { y, width, render }) one after another, like it's being typed.
+// `ns` namespaces every id so multiple animated cards can sit on the same
+// page without their SMIL ids/timelines colliding with each other.
+function buildTypedLines(lineDefs, ns, startId) {
+  let prevId = startId;
+  const clipDefs = [];
+  const rendered = [];
+  let lastId = prevId;
+  lineDefs.forEach((line, i) => {
+    const id = `${ns}rev${i}`;
+    const dur = Math.max(0.18, line.width / PX_PER_SEC).toFixed(2);
+    clipDefs.push(`<clipPath id="${ns}clip${i}"><rect x="0" y="${line.y - 15}" width="0" height="19">
+      <animate id="${id}" attributeName="width" from="0" to="${line.width.toFixed(0)}" dur="${dur}s" begin="${prevId}.end" fill="freeze" calcMode="linear" />
+    </rect></clipPath>`);
+    rendered.push(`<g clip-path="url(#${ns}clip${i})">${line.render}</g>`);
+    prevId = id;
+    lastId = id;
+  });
+  return { clipDefs, rendered, lastId };
 }
 
-function staticCursor(x, y) {
-  return `<rect x="${x.toFixed(0)}" y="${y - 12}" width="7" height="14" fill="${ACCENT}" />`;
+function blinkCursor(x, y, lastId) {
+  return `<rect x="${x.toFixed(0)}" y="${y - 12}" width="7" height="14" fill="${ACCENT}" opacity="0">
+    <animate attributeName="opacity" values="1;0" calcMode="discrete" dur="1s" begin="${lastId}.end" repeatCount="indefinite" />
+  </rect>`;
 }
 
 function terminalCard(topLanguage) {
@@ -267,7 +285,7 @@ function terminalCard(topLanguage) {
   const cmd1 = `${PROMPT_STR} whoami`;
   lineDefs.push({
     y,
-    width: cmd1.length * CHAR_W,
+    width: cmd1.length * CHAR_W + CLIP_PAD,
     render: `<text x="16" y="${y}" font-size="13"><tspan fill="${ACCENT}">${escapeXml(PROMPT_STR)}</tspan><tspan fill="${FG}"> whoami</tspan></text>`,
   });
   y += lineHeight;
@@ -275,20 +293,27 @@ function terminalCard(topLanguage) {
   fields.forEach(([key, value]) => {
     lineDefs.push({
       y,
-      width: 130 + String(value).length * CHAR_W,
+      width: 130 + String(value).length * CHAR_W + CLIP_PAD,
       render: `<text x="16" y="${y}" font-size="13"><tspan fill="${ACCENT}">${escapeXml(key)}</tspan><tspan fill="${MUTED}">:</tspan><tspan fill="${FG}" x="130">${escapeXml(value)}</tspan></text>`,
     });
     y += lineHeight;
   });
 
   const height = y + 18;
+  const { clipDefs, rendered, lastId } = buildTypedLines(lineDefs, "term", "termWinIn");
   const last = lineDefs[lineDefs.length - 1];
-  const cursor = staticCursor(16 + last.width + 6, last.y);
+  const cursor = blinkCursor(16 + last.width - CLIP_PAD + 6, last.y, lastId);
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" font-family="'Cascadia Code', 'Fira Code', Consolas, monospace">
-  <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="8" fill="${BG}" stroke="${BORDER}" />
-  ${windowsChrome({ width, titleText: "Windows PowerShell" })}
-  ${renderLines(lineDefs)}
+  <defs>
+    ${clipDefs.join("\n    ")}
+  </defs>
+  <g opacity="0">
+    <animate id="termWinIn" attributeName="opacity" from="0" to="1" dur="0.35s" begin="0s" fill="freeze" />
+    <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="8" fill="${BG}" stroke="${BORDER}" />
+    ${windowsChrome({ width, titleText: "Windows PowerShell" })}
+  </g>
+  ${rendered.join("\n  ")}
   ${cursor}
 </svg>`;
 }
@@ -305,10 +330,39 @@ function headerCard(tagline) {
   const startX = (width - textWidth) / 2;
   const y = height / 2 + fontSize / 3;
 
-  const cursor = staticCursor(startX + textWidth + 4, y);
+  const lineDefs = [
+    {
+      y,
+      width: textWidth + CLIP_PAD,
+      render: `<text x="${startX.toFixed(1)}" y="${y}" font-size="${fontSize}" fill="${ACCENT}">${escapeXml(tagline)}</text>`,
+      clipX: startX,
+    },
+  ];
+
+  let prevId = "hdrWinIn";
+  const clipDefs = [];
+  const rendered = [];
+  let lastId = prevId;
+  lineDefs.forEach((line, i) => {
+    const id = `hrev${i}`;
+    const dur = Math.max(0.3, line.width / PX_PER_SEC).toFixed(2);
+    clipDefs.push(`<clipPath id="hclip${i}"><rect x="${line.clipX.toFixed(1)}" y="${line.y - fontSize}" width="0" height="${fontSize + 8}">
+      <animate id="${id}" attributeName="width" from="0" to="${line.width.toFixed(0)}" dur="${dur}s" begin="${prevId}.end" fill="freeze" calcMode="linear" />
+    </rect></clipPath>`);
+    rendered.push(`<g clip-path="url(#hclip${i})">${line.render}</g>`);
+    prevId = id;
+    lastId = id;
+  });
+
+  const last = lineDefs[0];
+  const cursor = blinkCursor(last.clipX + last.width - CLIP_PAD + 4, y, lastId);
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" font-family="'Cascadia Code', 'Fira Code', Consolas, monospace">
-  <text x="${startX.toFixed(1)}" y="${y}" font-size="${fontSize}" fill="${ACCENT}">${escapeXml(tagline)}</text>
+  <defs>
+    ${clipDefs.join("\n    ")}
+  </defs>
+  <rect width="0" height="0"><animate id="hdrWinIn" attributeName="width" from="0" to="0" dur="0.01s" begin="0s" fill="freeze" /></rect>
+  ${rendered.join("\n  ")}
   ${cursor}
 </svg>`;
 }
@@ -358,7 +412,7 @@ function quoteCard(quote, dayNum, totalDays) {
   const cmd = `${PROMPT_STR} Get-Quote`;
   lineDefs.push({
     y,
-    width: cmd.length * CHAR_W,
+    width: cmd.length * CHAR_W + CLIP_PAD,
     render: `<text x="16" y="${y}" font-size="13"><tspan fill="${ACCENT}">${escapeXml(PROMPT_STR)}</tspan><tspan fill="${FG}"> Get-Quote</tspan></text>`,
   });
   y += lineHeight * 1.4;
@@ -367,7 +421,7 @@ function quoteCard(quote, dayNum, totalDays) {
   quoteLines.forEach((line) => {
     lineDefs.push({
       y,
-      width: line.length * CHAR_W,
+      width: line.length * CHAR_W + CLIP_PAD,
       render: `<text x="16" y="${y}" font-size="13" fill="${FG}">${escapeXml(line)}</text>`,
     });
     y += lineHeight;
@@ -376,7 +430,7 @@ function quoteCard(quote, dayNum, totalDays) {
   const authorLine = `— ${quote.author}`;
   lineDefs.push({
     y,
-    width: authorLine.length * CHAR_W,
+    width: authorLine.length * CHAR_W + CLIP_PAD,
     render: `<text x="16" y="${y}" font-size="13" fill="${ACCENT}">${escapeXml(authorLine)}</text>`,
   });
   y += lineHeight * 1.4;
@@ -384,19 +438,26 @@ function quoteCard(quote, dayNum, totalDays) {
   const dayLine = `Day ${dayNum} of ${totalDays}`;
   lineDefs.push({
     y,
-    width: dayLine.length * CHAR_W,
+    width: dayLine.length * CHAR_W + CLIP_PAD,
     render: `<text x="16" y="${y}" font-size="12" fill="${MUTED}">${escapeXml(dayLine)}</text>`,
   });
   y += lineHeight;
 
   const height = y + 18;
+  const { clipDefs, rendered, lastId } = buildTypedLines(lineDefs, "quote", "quoteWinIn");
   const last = lineDefs[lineDefs.length - 1];
-  const cursor = staticCursor(16 + last.width + 6, last.y);
+  const cursor = blinkCursor(16 + last.width - CLIP_PAD + 6, last.y, lastId);
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" font-family="'Cascadia Code', 'Fira Code', Consolas, monospace">
-  <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="8" fill="${BG}" stroke="${BORDER}" />
-  ${windowsChrome({ width, titleText: "Windows PowerShell" })}
-  ${renderLines(lineDefs)}
+  <defs>
+    ${clipDefs.join("\n    ")}
+  </defs>
+  <g opacity="0">
+    <animate id="quoteWinIn" attributeName="opacity" from="0" to="1" dur="0.35s" begin="0s" fill="freeze" />
+    <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="8" fill="${BG}" stroke="${BORDER}" />
+    ${windowsChrome({ width, titleText: "Windows PowerShell" })}
+  </g>
+  ${rendered.join("\n  ")}
   ${cursor}
 </svg>`;
 }
