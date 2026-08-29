@@ -1,21 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="520" height="181.6" viewBox="0 0 520 181.6" font-family="'Cascadia Code', 'Fira Code', Consolas, monospace">
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="203.60000000000002" viewBox="0 0 520 203.60000000000002" font-family="'Cascadia Code', 'Fira Code', Consolas, monospace">
   <defs>
     <clipPath id="quoteclip0"><rect x="0" y="43" width="0" height="19">
       <animate id="quoterev0" attributeName="width" from="0" to="279" dur="0.87s" begin="quoteWinIn.end" fill="freeze" calcMode="linear" />
     </rect></clipPath>
     <clipPath id="quoteclip1"><rect x="0" y="73.8" width="0" height="19">
-      <animate id="quoterev1" attributeName="width" from="0" to="487" dur="1.52s" begin="quoterev0.end" fill="freeze" calcMode="linear" />
+      <animate id="quoterev1" attributeName="width" from="0" to="462" dur="1.44s" begin="quoterev0.end" fill="freeze" calcMode="linear" />
     </rect></clipPath>
     <clipPath id="quoteclip2"><rect x="0" y="95.8" width="0" height="19">
-      <animate id="quoterev2" attributeName="width" from="0" to="105" dur="0.33s" begin="quoterev1.end" fill="freeze" calcMode="linear" />
+      <animate id="quoterev2" attributeName="width" from="0" to="96" dur="0.30s" begin="quoterev1.end" fill="freeze" calcMode="linear" />
     </rect></clipPath>
-    <clipPath id="quoteclip3"><rect x="0" y="126.6" width="0" height="19">
-      <animate id="quoterev3" attributeName="width" from="0" to="146" dur="0.46s" begin="quoterev2.end" fill="freeze" calcMode="linear" />
+    <clipPath id="quoteclip3"><rect x="0" y="117.80000000000001" width="0" height="19">
+      <animate id="quoterev3" attributeName="width" from="0" to="105" dur="0.33s" begin="quoterev2.end" fill="freeze" calcMode="linear" />
+    </rect></clipPath>
+    <clipPath id="quoteclip4"><rect x="0" y="148.60000000000002" width="0" height="19">
+      <animate id="quoterev4" attributeName="width" from="0" to="146" dur="0.46s" begin="quoterev3.end" fill="freeze" calcMode="linear" />
     </rect></clipPath>
   </defs>
   <g opacity="0">
     <animate id="quoteWinIn" attributeName="opacity" from="0" to="1" dur="0.35s" begin="0s" fill="freeze" />
-    <rect x="0.5" y="0.5" width="519" height="180.6" rx="8" fill="#0c0c0c" stroke="#2b2b2b" />
+    <rect x="0.5" y="0.5" width="519" height="202.60000000000002" rx="8" fill="#0c0c0c" stroke="#2b2b2b" />
     
     <rect x="0.5" y="0.5" width="519" height="31" rx="8" fill="#1f1f1f" />
     <rect x="0.5" y="23" width="519" height="8" fill="#1f1f1f" />
@@ -30,10 +33,11 @@
     <line x1="507" y1="10" x2="496" y2="21" stroke="#8a8a8a" stroke-width="1.2" />
   </g>
   <g clip-path="url(#quoteclip0)"><text x="16" y="58" font-size="13"><tspan fill="#1e8e56">PS C:\Users\luciano&gt;</tspan><tspan fill="#e6e6e6"> Get-Quote</tspan></text></g>
-  <g clip-path="url(#quoteclip1)"><text x="16" y="88.8" font-size="13" fill="#e6e6e6">&quot;If you want to become whole, let yourself be partial.&quot;</text></g>
-  <g clip-path="url(#quoteclip2)"><text x="16" y="110.8" font-size="13" fill="#1e8e56">— Lao Tzu</text></g>
-  <g clip-path="url(#quoteclip3)"><text x="16" y="141.6" font-size="12" fill="#8a8a8a">Day 240 of 365</text></g>
-  <rect x="138" y="129.6" width="7" height="14" fill="#1e8e56" opacity="0">
-    <animate attributeName="opacity" values="1;0" calcMode="discrete" dur="1s" begin="quoterev3.end" repeatCount="indefinite" />
+  <g clip-path="url(#quoteclip1)"><text x="16" y="88.8" font-size="13" fill="#e6e6e6">&quot;A tree that fills a man&#39;s embrace grows from a tiny</text></g>
+  <g clip-path="url(#quoteclip2)"><text x="16" y="110.8" font-size="13" fill="#e6e6e6">sprout.&quot;</text></g>
+  <g clip-path="url(#quoteclip3)"><text x="16" y="132.8" font-size="13" fill="#1e8e56">— Lao Tzu</text></g>
+  <g clip-path="url(#quoteclip4)"><text x="16" y="163.60000000000002" font-size="12" fill="#8a8a8a">Day 241 of 365</text></g>
+  <rect x="138" y="151.60000000000002" width="7" height="14" fill="#1e8e56" opacity="0">
+    <animate attributeName="opacity" values="1;0" calcMode="discrete" dur="1s" begin="quoterev4.end" repeatCount="indefinite" />
   </rect>
 </svg>
