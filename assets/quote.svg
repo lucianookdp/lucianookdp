@@ -4,7 +4,7 @@
       <animate id="quoterev0" attributeName="width" from="0" to="279" dur="0.87s" begin="quoteWinIn.end" fill="freeze" calcMode="linear" />
     </rect></clipPath>
     <clipPath id="quoteclip1"><rect x="0" y="73.8" width="0" height="19">
-      <animate id="quoterev1" attributeName="width" from="0" to="321" dur="1.00s" begin="quoterev0.end" fill="freeze" calcMode="linear" />
+      <animate id="quoterev1" attributeName="width" from="0" to="428" dur="1.34s" begin="quoterev0.end" fill="freeze" calcMode="linear" />
     </rect></clipPath>
     <clipPath id="quoteclip2"><rect x="0" y="95.8" width="0" height="19">
       <animate id="quoterev2" attributeName="width" from="0" to="105" dur="0.33s" begin="quoterev1.end" fill="freeze" calcMode="linear" />
@@ -30,9 +30,9 @@
     <line x1="507" y1="10" x2="496" y2="21" stroke="#8a8a8a" stroke-width="1.2" />
   </g>
   <g clip-path="url(#quoteclip0)"><text x="16" y="58" font-size="13"><tspan fill="#1e8e56">PS C:\Users\luciano&gt;</tspan><tspan fill="#e6e6e6"> Get-Quote</tspan></text></g>
-  <g clip-path="url(#quoteclip1)"><text x="16" y="88.8" font-size="13" fill="#e6e6e6">&quot;To lead people, walk beside them.&quot;</text></g>
+  <g clip-path="url(#quoteclip1)"><text x="16" y="88.8" font-size="13" fill="#e6e6e6">&quot;An ant on the move does more than a dozing ox.&quot;</text></g>
   <g clip-path="url(#quoteclip2)"><text x="16" y="110.8" font-size="13" fill="#1e8e56">— Lao Tzu</text></g>
-  <g clip-path="url(#quoteclip3)"><text x="16" y="141.6" font-size="12" fill="#8a8a8a">Day 244 of 365</text></g>
+  <g clip-path="url(#quoteclip3)"><text x="16" y="141.6" font-size="12" fill="#8a8a8a">Day 245 of 365</text></g>
   <rect x="138" y="129.6" width="7" height="14" fill="#1e8e56" opacity="0">
     <animate attributeName="opacity" values="1;0" calcMode="discrete" dur="1s" begin="quoterev3.end" repeatCount="indefinite" />
   </rect>
