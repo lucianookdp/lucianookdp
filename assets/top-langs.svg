@@ -7,16 +7,16 @@
   </style>
   <text x="20" y="28" class="title">Most Used Languages</text>
   <rect x="20" y="48" width="315" height="8" rx="4" fill="#1f1f1f" />
-  <rect x="20" y="48" width="116.754328153568" height="8" fill="#1e8e56" />
-  <rect x="136.754328153568" y="48" width="59.68387034529428" height="8" fill="#3fb27f" />
-  <rect x="196.43819849886228" y="48" width="48.15262359382994" height="8" fill="#6fcf9e" />
-  <rect x="244.5908220926922" y="48" width="32.9237330456164" height="8" fill="#a3e0bf" />
-  <rect x="277.5145551383086" y="48" width="30.10807050061251" height="8" fill="#e6e6e6" />
-  <rect x="307.6226256389211" y="48" width="27.377374361078857" height="8" fill="#8a8a8a" />
-  <circle cx="20" cy="76" r="5" fill="#1e8e56" /><text x="32" y="80" class="label">JavaScript <tspan fill="#8a8a8a">37.1%</tspan></text>
-  <circle cx="190" cy="76" r="5" fill="#3fb27f" /><text x="202" y="80" class="label">Python <tspan fill="#8a8a8a">18.9%</tspan></text>
-  <circle cx="20" cy="98" r="5" fill="#6fcf9e" /><text x="32" y="102" class="label">PHP <tspan fill="#8a8a8a">15.3%</tspan></text>
-  <circle cx="190" cy="98" r="5" fill="#a3e0bf" /><text x="202" y="102" class="label">TypeScript <tspan fill="#8a8a8a">10.5%</tspan></text>
-  <circle cx="20" cy="120" r="5" fill="#e6e6e6" /><text x="32" y="124" class="label">CSS <tspan fill="#8a8a8a">9.6%</tspan></text>
-  <circle cx="190" cy="120" r="5" fill="#8a8a8a" /><text x="202" y="124" class="label">Blade <tspan fill="#8a8a8a">8.7%</tspan></text>
+  <rect x="20" y="48" width="102.76422732625" height="8" fill="#1e8e56" />
+  <rect x="122.76422732625" y="48" width="64.00905520734224" height="8" fill="#3fb27f" />
+  <rect x="186.77328253359224" y="48" width="52.53224370240888" height="8" fill="#6fcf9e" />
+  <rect x="239.30552623600113" y="48" width="42.38272992195251" height="8" fill="#a3e0bf" />
+  <rect x="281.6882561579536" y="48" width="29.214866519115386" height="8" fill="#e6e6e6" />
+  <rect x="310.903122677069" y="48" width="24.096877322930986" height="8" fill="#8a8a8a" />
+  <circle cx="20" cy="76" r="5" fill="#1e8e56" /><text x="32" y="80" class="label">JavaScript <tspan fill="#8a8a8a">32.6%</tspan></text>
+  <circle cx="190" cy="76" r="5" fill="#3fb27f" /><text x="202" y="80" class="label">TypeScript <tspan fill="#8a8a8a">20.3%</tspan></text>
+  <circle cx="20" cy="98" r="5" fill="#6fcf9e" /><text x="32" y="102" class="label">Python <tspan fill="#8a8a8a">16.7%</tspan></text>
+  <circle cx="190" cy="98" r="5" fill="#a3e0bf" /><text x="202" y="102" class="label">PHP <tspan fill="#8a8a8a">13.5%</tspan></text>
+  <circle cx="20" cy="120" r="5" fill="#e6e6e6" /><text x="32" y="124" class="label">CSS <tspan fill="#8a8a8a">9.3%</tspan></text>
+  <circle cx="190" cy="120" r="5" fill="#8a8a8a" /><text x="202" y="124" class="label">Blade <tspan fill="#8a8a8a">7.6%</tspan></text>
 </svg>

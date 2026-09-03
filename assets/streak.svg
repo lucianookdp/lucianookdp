@@ -6,6 +6,6 @@
     .value { font-size: 12px; font-weight: 600; fill: #e6e6e6; }
   </style>
   <text x="20" y="28" class="title">Contribution Streak</text>
-  <text x="88.75" y="60" text-anchor="middle" class="value" font-size="20" fill="#e6e6e6">1</text><text x="88.75" y="80" text-anchor="middle" class="label">Current streak</text>
+  <text x="88.75" y="60" text-anchor="middle" class="value" font-size="20" fill="#e6e6e6">2</text><text x="88.75" y="80" text-anchor="middle" class="label">Current streak</text>
   <text x="266.25" y="60" text-anchor="middle" class="value" font-size="20" fill="#e6e6e6">5</text><text x="266.25" y="80" text-anchor="middle" class="label">Longest streak</text>
 </svg>
