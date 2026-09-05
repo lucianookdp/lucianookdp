@@ -8,6 +8,6 @@
   <text x="20" y="28" class="title">GitHub Stats</text>
   <text x="20" y="56" class="label">Total repositories</text><text x="335" y="56" text-anchor="end" class="value">37</text>
   <text x="20" y="82" class="label">Total stars</text><text x="335" y="82" text-anchor="end" class="value">1</text>
-  <text x="20" y="108" class="label">Followers</text><text x="335" y="108" text-anchor="end" class="value">15</text>
+  <text x="20" y="108" class="label">Followers</text><text x="335" y="108" text-anchor="end" class="value">16</text>
   <text x="20" y="134" class="label">Contributions</text><text x="335" y="134" text-anchor="end" class="value">259</text>
 </svg>
