@@ -36,7 +36,7 @@
   <g clip-path="url(#termclip1)"><text x="16" y="80" font-size="13"><tspan fill="#1e8e56">os</tspan><tspan fill="#8a8a8a">:</tspan><tspan fill="#e6e6e6" x="130">Windows 11</tspan></text></g>
   <g clip-path="url(#termclip2)"><text x="16" y="102" font-size="13"><tspan fill="#1e8e56">shell</tspan><tspan fill="#8a8a8a">:</tspan><tspan fill="#e6e6e6" x="130">PowerShell 7</tspan></text></g>
   <g clip-path="url(#termclip3)"><text x="16" y="124" font-size="13"><tspan fill="#1e8e56">editor</tspan><tspan fill="#8a8a8a">:</tspan><tspan fill="#e6e6e6" x="130">VS Code</tspan></text></g>
-  <g clip-path="url(#termclip4)"><text x="16" y="146" font-size="13"><tspan fill="#1e8e56">top_lang</tspan><tspan fill="#8a8a8a">:</tspan><tspan fill="#e6e6e6" x="130">JavaScript</tspan></text></g>
+  <g clip-path="url(#termclip4)"><text x="16" y="146" font-size="13"><tspan fill="#1e8e56">top_lang</tspan><tspan fill="#8a8a8a">:</tspan><tspan fill="#e6e6e6" x="130">TypeScript</tspan></text></g>
   <rect x="235" y="134" width="7" height="14" fill="#1e8e56" opacity="0">
     <animate attributeName="opacity" values="1;0" calcMode="discrete" dur="1s" begin="termrev4.end" repeatCount="indefinite" />
   </rect>
