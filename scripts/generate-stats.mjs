@@ -10,7 +10,7 @@
 const USERNAME = process.env.PROFILE_USER || "lucianookdp";
 const TOKEN = process.env.GITHUB_TOKEN;
 
-const ACCENT = "#3fb950";
+const TITLE = "#e6edf3";
 const BG = "#0d1117";
 const BORDER = "#22272e";
 const FG = "#e6edf3";
@@ -73,7 +73,7 @@ function card({ title, width, height, body }) {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" font-family="${FONT}">
   <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="12" fill="${BG}" stroke="${BORDER}" />
   <style>
-    .title { font-size: 14px; font-weight: 600; fill: ${ACCENT}; }
+    .title { font-size: 14px; font-weight: 600; fill: ${TITLE}; }
     .label { font-size: 12.5px; fill: ${MUTED}; }
     .value { font-size: 12.5px; font-weight: 600; fill: ${FG}; }
     .quote { font-size: 14px; font-weight: 400; fill: ${FG}; }

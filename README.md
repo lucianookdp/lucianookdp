@@ -1,8 +1,7 @@
 <h1 align="center">Luciano K. Dal Pai</h1>
 
 <p align="center">
-  Full-Stack Software Engineer · Brazil<br />
-  I turn everyday problems into software people actually use.
+  Full-Stack Software Engineer
 </p>
 
 <p align="center">
@@ -49,19 +48,17 @@
 
 ## Featured projects
 
-**[cnpj-due-diligence](https://github.com/lucianookdp/cnpj-due-diligence)** &nbsp;·&nbsp; [live demo](https://lucianookdp.github.io/cnpj-due-diligence/)  
+🔎 **[cnpj-due-diligence](https://github.com/lucianookdp/cnpj-due-diligence)** &nbsp;·&nbsp; [live demo](https://lucianookdp.github.io/cnpj-due-diligence/)  
 Checks a Brazilian company before you do business with it: ownership graph, official restrictive lists and an explainable risk score.
 
-**[Rachaí](https://github.com/lucianookdp/rachai-web)** &nbsp;·&nbsp; [live demo](https://userachai.com.br)  
+💸 **[Rachaí](https://github.com/lucianookdp/rachai-web)** &nbsp;·&nbsp; [live demo](https://userachai.com.br)  
 A group logs shared expenses and gets back the fewest payments needed to settle up. No signup.
 
-**[Scammeter](https://github.com/lucianookdp/scammeter)** &nbsp;·&nbsp; [live demo](https://lucianookdp.github.io/scammeter/)  
+🛡️ **[Scammeter](https://github.com/lucianookdp/scammeter)** &nbsp;·&nbsp; [live demo](https://lucianookdp.github.io/scammeter/)  
 Tells you whether a Brazilian site is a scam and why, by cross-checking the company, the domain and the payment key.
 
-**[LostAndFound](https://github.com/lucianookdp/LostAndFound)** &nbsp;·&nbsp; [live demo](https://lucianookdp.github.io/LostAndFound/)  
+🎒 **[LostAndFound](https://github.com/lucianookdp/LostAndFound)** &nbsp;·&nbsp; [live demo](https://lucianookdp.github.io/LostAndFound/)  
 Lost and found system for schools and universities. My capstone project, with a guided demo.
-
-More at [lucianookdp.dev](https://lucianookdp.dev).
 
 ## GitHub
 
