@@ -1,25 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="355" height="163" viewBox="0 0 355 163" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
-  <rect x="0.5" y="0.5" width="354" height="162" rx="12" fill="#0d1117" stroke="#22272e" />
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="124" viewBox="0 0 520 124" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <rect x="0.5" y="0.5" width="519" height="123" rx="12" fill="#0d1117" stroke="#22272e" />
   <style>
-    .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 1.3px; fill: #6e7681; }
+    .title { font-size: 14px; font-weight: 600; fill: #3fb950; }
     .label { font-size: 12.5px; fill: #8b949e; }
     .value { font-size: 12.5px; font-weight: 600; fill: #e6edf3; }
-    .metric { font-size: 22px; font-weight: 600; fill: #e6edf3; }
     .quote { font-size: 14px; font-weight: 400; fill: #e6edf3; }
-    .rule { stroke: #1b2026; stroke-width: 1; }
   </style>
-  <text x="22" y="30" class="eyebrow">LANGUAGES</text>
-  <rect x="22" y="52" width="311" height="8" rx="4" fill="#21262d" />
-  <rect x="22" y="52" width="110.29" height="8" fill="#3178c6" />
-  <rect x="132.29" y="52" width="91.96" height="8" fill="#f1e05a" />
-  <rect x="224.25" y="52" width="48.78" height="8" fill="#3572A5" />
-  <rect x="273.03" y="52" width="36.04" height="8" fill="#563d7c" />
-  <rect x="309.07" y="52" width="17.71" height="8" fill="#ff5a03" />
-  <rect x="326.78" y="52" width="6.21" height="8" fill="#e34c26" />
-  <rect x="22" y="77" width="8" height="8" rx="2" fill="#3178c6" /><text x="38" y="86" class="label"><tspan fill="#e6edf3">TypeScript</tspan> 35.5%</text>
-  <rect x="188" y="77" width="8" height="8" rx="2" fill="#f1e05a" /><text x="204" y="86" class="label"><tspan fill="#e6edf3">JavaScript</tspan> 29.6%</text>
-  <rect x="22" y="101" width="8" height="8" rx="2" fill="#3572A5" /><text x="38" y="110" class="label"><tspan fill="#e6edf3">Python</tspan> 15.7%</text>
-  <rect x="188" y="101" width="8" height="8" rx="2" fill="#563d7c" /><text x="204" y="110" class="label"><tspan fill="#e6edf3">CSS</tspan> 11.6%</text>
-  <rect x="22" y="125" width="8" height="8" rx="2" fill="#ff5a03" /><text x="38" y="134" class="label"><tspan fill="#e6edf3">Astro</tspan> 5.7%</text>
-  <rect x="188" y="125" width="8" height="8" rx="2" fill="#e34c26" /><text x="204" y="134" class="label"><tspan fill="#e6edf3">HTML</tspan> 2.0%</text>
+  <text x="22" y="30" class="title">Most Used Languages</text>
+  <rect x="22" y="50" width="476" height="8" rx="4" fill="#21262d" />
+  <rect x="22" y="50" width="168.81" height="8" fill="#3178c6" />
+  <rect x="190.81" y="50" width="140.76" height="8" fill="#f1e05a" />
+  <rect x="331.57" y="50" width="74.66" height="8" fill="#3572A5" />
+  <rect x="406.23" y="50" width="55.16" height="8" fill="#563d7c" />
+  <rect x="461.39" y="50" width="27.1" height="8" fill="#ff5a03" />
+  <rect x="488.49" y="50" width="9.51" height="8" fill="#e34c26" />
+  <rect x="22" y="75" width="8" height="8" rx="2" fill="#3178c6" /><text x="38" y="84" class="label"><tspan fill="#e6edf3">TypeScript</tspan> 35.5%</text>
+  <rect x="180.67" y="75" width="8" height="8" rx="2" fill="#f1e05a" /><text x="196.67" y="84" class="label"><tspan fill="#e6edf3">JavaScript</tspan> 29.6%</text>
+  <rect x="339.33" y="75" width="8" height="8" rx="2" fill="#3572A5" /><text x="355.33" y="84" class="label"><tspan fill="#e6edf3">Python</tspan> 15.7%</text>
+  <rect x="22" y="99" width="8" height="8" rx="2" fill="#563d7c" /><text x="38" y="108" class="label"><tspan fill="#e6edf3">CSS</tspan> 11.6%</text>
+  <rect x="180.67" y="99" width="8" height="8" rx="2" fill="#ff5a03" /><text x="196.67" y="108" class="label"><tspan fill="#e6edf3">Astro</tspan> 5.7%</text>
+  <rect x="339.33" y="99" width="8" height="8" rx="2" fill="#e34c26" /><text x="355.33" y="108" class="label"><tspan fill="#e6edf3">HTML</tspan> 2.0%</text>
 </svg>

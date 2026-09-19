@@ -1,14 +1,17 @@
 <h1 align="center">Luciano K. Dal Pai</h1>
 
 <p align="center">
-  Full-stack software engineer, based in Brazil.<br />
-  I build web and mobile products end to end, from the database to the interface.
+  Full-Stack Software Engineer · Brazil<br />
+  I turn everyday problems into software people actually use.
 </p>
 
 <p align="center">
-  <a href="https://lucianookdp.dev">lucianookdp.dev</a>
-  &nbsp;·&nbsp;
-  <a href="mailto:engslucianok@gmail.com">engslucianok@gmail.com</a>
+  <a href="https://lucianookdp.dev">
+    <img src="https://img.shields.io/badge/lucianookdp.dev-1f2328?style=flat-square&logo=googlechrome&logoColor=white" alt="Portfolio" />
+  </a>
+  <a href="mailto:engslucianok@gmail.com">
+    <img src="https://img.shields.io/badge/engslucianok@gmail.com-1f2328?style=flat-square&logo=gmail&logoColor=white" alt="Email" />
+  </a>
 </p>
 
 ## Languages
@@ -44,35 +47,26 @@
   <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
 </p>
 
-## Selected work
+## Featured projects
 
 **[cnpj-due-diligence](https://github.com/lucianookdp/cnpj-due-diligence)** &nbsp;·&nbsp; [live demo](https://lucianookdp.github.io/cnpj-due-diligence/)  
-Checks a Brazilian company before you do business with it: ownership graph, official restrictive lists and an explainable risk score.  
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" /> <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI" /> <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" /> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" /> <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+Checks a Brazilian company before you do business with it: ownership graph, official restrictive lists and an explainable risk score.
 
 **[Rachaí](https://github.com/lucianookdp/rachai-web)** &nbsp;·&nbsp; [live demo](https://userachai.com.br)  
-A group logs shared expenses and gets back the fewest payments needed to settle up. No signup.  
-<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" /> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" /> <img src="https://img.shields.io/badge/Fastify-000000?style=flat-square&logo=fastify&logoColor=white" alt="Fastify" /> <img src="https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white" alt="Prisma" /> <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+A group logs shared expenses and gets back the fewest payments needed to settle up. No signup.
 
 **[Scammeter](https://github.com/lucianookdp/scammeter)** &nbsp;·&nbsp; [live demo](https://lucianookdp.github.io/scammeter/)  
-Tells you whether a Brazilian site is a scam and why, by cross-checking the company, the domain and the payment key.  
-<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" /> <img src="https://img.shields.io/badge/Fastify-000000?style=flat-square&logo=fastify&logoColor=white" alt="Fastify" /> <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" /> <img src="https://img.shields.io/badge/Railway-0B0D0E?style=flat-square&logo=railway&logoColor=white" alt="Railway" />
+Tells you whether a Brazilian site is a scam and why, by cross-checking the company, the domain and the payment key.
 
 **[LostAndFound](https://github.com/lucianookdp/LostAndFound)** &nbsp;·&nbsp; [live demo](https://lucianookdp.github.io/LostAndFound/)  
-Lost and found system for schools and universities. My capstone project, with a guided demo.  
-<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" /> <img src="https://img.shields.io/badge/Node.js-5FA04E?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" /> <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL" /> <img src="https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white" alt="JWT" />
+Lost and found system for schools and universities. My capstone project, with a guided demo.
 
 More at [lucianookdp.dev](https://lucianookdp.dev).
 
 ## GitHub
 
 <p align="center">
-  <img src="assets/stats.svg" alt="GitHub stats" />
   <img src="assets/top-langs.svg" alt="Most used languages" />
-</p>
-
-<p align="center">
-  <img src="assets/streak.svg" alt="Contribution streak" />
 </p>
 
 <p align="center">
