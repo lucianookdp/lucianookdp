@@ -1,17 +1,14 @@
 <h1 align="center">Luciano K. Dal Pai</h1>
 
 <p align="center">
-  Full-stack software engineer based in Brazil.<br />
-  I build web and mobile apps from the database to the interface.
+  Full-stack software engineer, based in Brazil.<br />
+  I build web and mobile products end to end, from the database to the interface.
 </p>
 
 <p align="center">
-  <a href="https://lucianookdp.dev">
-    <img src="https://img.shields.io/badge/Portfolio-lucianookdp.dev-1f883d?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio" />
-  </a>
-  <a href="mailto:engslucianok@gmail.com">
-    <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-  </a>
+  <a href="https://lucianookdp.dev">lucianookdp.dev</a>
+  &nbsp;·&nbsp;
+  <a href="mailto:engslucianok@gmail.com">engslucianok@gmail.com</a>
 </p>
 
 ## Languages
@@ -47,23 +44,27 @@
   <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
 </p>
 
-## Projects
+## Selected work
 
-**[cnpj-due-diligence](https://github.com/lucianookdp/cnpj-due-diligence)** &nbsp;·&nbsp; [open it](https://lucianookdp.github.io/cnpj-due-diligence/)  
-Checks a Brazilian company before you do business with it: ownership graph, official restrictive lists and an explainable risk score.
+**[cnpj-due-diligence](https://github.com/lucianookdp/cnpj-due-diligence)** &nbsp;·&nbsp; [live demo](https://lucianookdp.github.io/cnpj-due-diligence/)  
+Checks a Brazilian company before you do business with it: ownership graph, official restrictive lists and an explainable risk score.  
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" /> <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI" /> <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" /> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" /> <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
 
-**[Rachaí](https://github.com/lucianookdp/rachai-web)** &nbsp;·&nbsp; [open it](https://userachai.com.br)  
-A group logs shared expenses and gets back the fewest payments needed to settle up. No signup.
+**[Rachaí](https://github.com/lucianookdp/rachai-web)** &nbsp;·&nbsp; [live demo](https://userachai.com.br)  
+A group logs shared expenses and gets back the fewest payments needed to settle up. No signup.  
+<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" /> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" /> <img src="https://img.shields.io/badge/Fastify-000000?style=flat-square&logo=fastify&logoColor=white" alt="Fastify" /> <img src="https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white" alt="Prisma" /> <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
 
-**[Scammeter](https://github.com/lucianookdp/scammeter)** &nbsp;·&nbsp; [open it](https://lucianookdp.github.io/scammeter/)  
-Tells you whether a Brazilian site is a scam and why, by cross-checking the company, the domain and the payment key.
+**[Scammeter](https://github.com/lucianookdp/scammeter)** &nbsp;·&nbsp; [live demo](https://lucianookdp.github.io/scammeter/)  
+Tells you whether a Brazilian site is a scam and why, by cross-checking the company, the domain and the payment key.  
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" /> <img src="https://img.shields.io/badge/Fastify-000000?style=flat-square&logo=fastify&logoColor=white" alt="Fastify" /> <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" /> <img src="https://img.shields.io/badge/Railway-0B0D0E?style=flat-square&logo=railway&logoColor=white" alt="Railway" />
 
-**[LostAndFound](https://github.com/lucianookdp/LostAndFound)** &nbsp;·&nbsp; [open it](https://lucianookdp.github.io/LostAndFound/)  
-Lost and found system for schools and universities. My capstone project, with a guided demo.
+**[LostAndFound](https://github.com/lucianookdp/LostAndFound)** &nbsp;·&nbsp; [live demo](https://lucianookdp.github.io/LostAndFound/)  
+Lost and found system for schools and universities. My capstone project, with a guided demo.  
+<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" /> <img src="https://img.shields.io/badge/Node.js-5FA04E?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" /> <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL" /> <img src="https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white" alt="JWT" />
 
 More at [lucianookdp.dev](https://lucianookdp.dev).
 
-## GitHub stats
+## GitHub
 
 <p align="center">
   <img src="assets/stats.svg" alt="GitHub stats" />
@@ -82,6 +83,6 @@ More at [lucianookdp.dev](https://lucianookdp.dev).
   <sub>
     Cards are self-hosted and refreshed daily by <a href="./.github/workflows">GitHub Actions</a>
     &nbsp;·&nbsp;
-    <img src="https://komarev.com/ghpvc/?username=lucianookdp&color=1f883d&style=flat-square&label=views" height="20" alt="profile views" align="absmiddle" />
+    <img src="https://komarev.com/ghpvc/?username=lucianookdp&color=30363d&style=flat-square&label=profile%20views" height="20" alt="profile views" align="absmiddle" />
   </sub>
 </p>

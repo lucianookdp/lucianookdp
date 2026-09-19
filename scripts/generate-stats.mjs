@@ -4,18 +4,27 @@
 // service. Runs on GitHub Actions with the default GITHUB_TOKEN, no PAT needed.
 //
 // One fixed dark palette for the card chrome, the same tones GitHub uses, so
-// the cards sit well on both the light and the dark theme. Languages are drawn
-// in their own brand colours.
+// the cards sit well on both the light and the dark theme. The chrome itself
+// carries no accent colour; the only colour on a card is the language bar,
+// drawn in each language's own brand tone.
 
 const USERNAME = process.env.PROFILE_USER || "lucianookdp";
 const TOKEN = process.env.GITHUB_TOKEN;
 
-const ACCENT = "#3fb950";
 const BG = "#0d1117";
-const BORDER = "#30363d";
+const BORDER = "#22272e";
+const RULE = "#1b2026";
 const FG = "#e6edf3";
 const MUTED = "#8b949e";
+const DIM = "#6e7681";
 const TRACK = "#21262d";
+
+const FONT =
+  "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
+
+// Two cards side by side, then the full-width ones underneath.
+const HALF = 355;
+const FULL = 730;
 
 if (!TOKEN) {
   console.error("Missing GITHUB_TOKEN");
@@ -130,21 +139,29 @@ function escapeXml(str) {
   );
 }
 
+// The title is a small uppercase eyebrow rather than a coloured heading;
+// `text-transform` is unreliable in SVG, so the case is applied here.
 function card({ title, width, height, body }) {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" font-family="'Cascadia Code', 'Fira Code', Consolas, monospace">
-  <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="10" fill="${BG}" stroke="${BORDER}" />
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" font-family="${FONT}">
+  <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="12" fill="${BG}" stroke="${BORDER}" />
   <style>
-    .title { font-size: 15px; font-weight: 600; fill: ${ACCENT}; }
-    .label { font-size: 12px; fill: ${MUTED}; }
-    .value { font-size: 12px; font-weight: 600; fill: ${FG}; }
+    .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 1.3px; fill: ${DIM}; }
+    .label { font-size: 12.5px; fill: ${MUTED}; }
+    .value { font-size: 12.5px; font-weight: 600; fill: ${FG}; }
+    .metric { font-size: 22px; font-weight: 600; fill: ${FG}; }
+    .quote { font-size: 14px; font-weight: 400; fill: ${FG}; }
+    .rule { stroke: ${RULE}; stroke-width: 1; }
   </style>
-  <text x="20" y="28" class="title">${escapeXml(title)}</text>
+  <text x="22" y="30" class="eyebrow">${escapeXml(title.toUpperCase())}</text>
   ${body}
 </svg>`;
 }
 
+const ROW_TOP = 64;
+const ROW_STEP = 27;
+
 function statsCardHeight() {
-  return 56 + 4 * 26 - 4;
+  return ROW_TOP + 3 * ROW_STEP + 18;
 }
 
 // `minHeight` lets this be matched to topLangsCard's height so the two
@@ -152,24 +169,31 @@ function statsCardHeight() {
 // `style="vertical-align"`, so equal SVG heights is the only reliable fix).
 function statsCard({ repos, stars, followers, contributions }, minHeight) {
   const rows = [
-    ["Total repositories", repos],
-    ["Total stars", stars],
+    ["Repositories", repos],
+    ["Stars", stars],
     ["Followers", followers],
-    ["Contributions", contributions],
+    ["Contributions (last year)", contributions],
   ];
   const body = rows
     .map(([label, value], i) => {
-      const y = 56 + i * 26;
-      return `<text x="20" y="${y}" class="label">${escapeXml(label)}</text><text x="335" y="${y}" text-anchor="end" class="value">${escapeXml(value)}</text>`;
+      const y = ROW_TOP + i * ROW_STEP;
+      const rule =
+        i === 0
+          ? ""
+          : `<line x1="22" x2="${HALF - 22}" y1="${y - 18}" y2="${y - 18}" class="rule" />`;
+      return `${rule}<text x="22" y="${y}" class="label">${escapeXml(label)}</text><text x="${HALF - 22}" y="${y}" text-anchor="end" class="value">${escapeXml(value)}</text>`;
     })
     .join("\n  ");
   const height = Math.max(statsCardHeight(), minHeight || 0);
-  return card({ title: "GitHub Stats", width: 355, height, body });
+  return card({ title: "GitHub", width: HALF, height, body });
 }
+
+const LEGEND_TOP = 86;
+const LEGEND_STEP = 24;
 
 function topLangsCardHeight(totals) {
   const rows = Math.ceil(Math.min(totals.size, 6) / 2);
-  return 80 + rows * 22 - 6;
+  return LEGEND_TOP + (rows - 1) * LEGEND_STEP + 14;
 }
 
 // Cor de marca de cada linguagem, as mesmas que o GitHub usa no linguist.
@@ -208,13 +232,13 @@ function topLangsCard(totals, minHeight) {
   const sorted = [...totals.entries()].sort((a, b) => b[1] - a[1]).slice(0, 6);
   const total = sorted.reduce((sum, [, bytes]) => sum + bytes, 0);
 
-  const barWidth = 315;
-  let track = `<rect x="20" y="48" width="${barWidth}" height="8" rx="4" fill="${TRACK}" />`;
-  let x = 20;
+  const barWidth = HALF - 44;
+  const track = `<rect x="22" y="52" width="${barWidth}" height="8" rx="4" fill="${TRACK}" />`;
+  let x = 22;
   const segments = sorted
     .map(([lang, bytes], i) => {
-      const w = total > 0 ? (bytes / total) * barWidth : 0;
-      const rect = `<rect x="${x}" y="48" width="${w}" height="8" fill="${corDaLinguagem(lang, i)}" />`;
+      const w = total > 0 ? Number(((bytes / total) * barWidth).toFixed(2)) : 0;
+      const rect = `<rect x="${Number(x.toFixed(2))}" y="52" width="${w}" height="8" fill="${corDaLinguagem(lang, i)}" />`;
       x += w;
       return rect;
     })
@@ -225,15 +249,15 @@ function topLangsCard(totals, minHeight) {
       const pct = total > 0 ? ((bytes / total) * 100).toFixed(1) : "0.0";
       const col = i % 2;
       const row = Math.floor(i / 2);
-      const lx = 20 + col * 170;
-      const ly = 80 + row * 22;
-      return `<circle cx="${lx}" cy="${ly - 4}" r="5" fill="${corDaLinguagem(lang, i)}" /><text x="${lx + 12}" y="${ly}" class="label">${escapeXml(lang)} <tspan fill="${MUTED}">${pct}%</tspan></text>`;
+      const lx = 22 + col * 166;
+      const ly = LEGEND_TOP + row * LEGEND_STEP;
+      return `<rect x="${lx}" y="${ly - 9}" width="8" height="8" rx="2" fill="${corDaLinguagem(lang, i)}" /><text x="${lx + 16}" y="${ly}" class="label"><tspan fill="${FG}">${escapeXml(lang)}</tspan> ${pct}%</text>`;
     })
     .join("\n  ");
 
   const height = Math.max(topLangsCardHeight(totals), minHeight || 0);
   const body = `${track}\n  ${segments}\n  ${legend}`;
-  return card({ title: "Most Used Languages", width: 355, height, body });
+  return card({ title: "Languages", width: HALF, height, body });
 }
 
 function streakCard({ current, longest }) {
@@ -241,14 +265,20 @@ function streakCard({ current, longest }) {
     ["Current streak", current],
     ["Longest streak", longest],
   ];
-  const colWidth = 355 / cols.length;
+  const colWidth = FULL / cols.length;
+  const divider = `<line x1="${colWidth}" x2="${colWidth}" y1="50" y2="98" class="rule" />`;
   const body = cols
     .map(([label, value], i) => {
       const cx = colWidth * i + colWidth / 2;
-      return `<text x="${cx}" y="60" text-anchor="middle" class="value" font-size="20" fill="${FG}">${escapeXml(value)}</text><text x="${cx}" y="80" text-anchor="middle" class="label">${escapeXml(label)}</text>`;
+      return `<text x="${cx}" y="76" text-anchor="middle" class="metric">${escapeXml(value)}</text><text x="${cx}" y="96" text-anchor="middle" class="label">${escapeXml(label)}</text>`;
     })
     .join("\n  ");
-  return card({ title: "Contribution Streak", width: 355, height: 96, body });
+  return card({
+    title: "Contribution streak",
+    width: FULL,
+    height: 116,
+    body: `${divider}\n  ${body}`,
+  });
 }
 
 // ---- Quote of the day (day-of-year -> fixed quote, no randomness) ----
@@ -286,22 +316,23 @@ async function loadQuotes() {
 }
 
 function quoteCard(quote, dayNum, totalDays) {
-  const width = 520;
-  const lineHeight = 22;
-  const linhas = wrapText(quote.text, 60);
+  const width = FULL;
+  const lineHeight = 24;
+  const linhas = wrapText(quote.text, 84);
 
-  let y = 56;
+  let y = 62;
   const corpo = linhas
     .map((linha) => {
-      const t = `<text x="20" y="${y}" class="value" font-weight="400">${escapeXml(linha)}</text>`;
+      const t = `<text x="22" y="${y}" class="quote">${escapeXml(linha)}</text>`;
       y += lineHeight;
       return t;
     })
     .join("\n  ");
 
-  const autor = `<text x="20" y="${y + 8}" class="label">${escapeXml(quote.author || "Unknown")}</text>`;
-  const dia = `<text x="${width - 20}" y="${y + 8}" class="label" text-anchor="end">day ${dayNum} of ${totalDays}</text>`;
-  const height = y + 28;
+  const rodapeY = y + 10;
+  const autor = `<text x="22" y="${rodapeY}" class="label">${escapeXml(quote.author || "Unknown")}</text>`;
+  const dia = `<text x="${width - 22}" y="${rodapeY}" class="label" text-anchor="end">day ${dayNum} of ${totalDays}</text>`;
+  const height = rodapeY + 20;
 
   return card({
     title: "Quote of the day",
