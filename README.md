@@ -49,12 +49,17 @@
 
 ## Projects
 
-| | What it does | |
-| --- | --- | --- |
-| **cnpj-due-diligence** | Checks a Brazilian company before you do business with it: ownership graph, official restrictive lists and an explainable risk score. | [live](https://lucianookdp.github.io/cnpj-due-diligence/) · [code](https://github.com/lucianookdp/cnpj-due-diligence) |
-| **Rachaí** | A group logs shared expenses and gets back the fewest payments needed to settle up. No signup. | [live](https://userachai.com.br) · [code](https://github.com/lucianookdp/rachai-web) |
-| **Scammeter** | Tells you whether a Brazilian site is a scam and why, by cross-checking the company, the domain and the payment key. | [live](https://lucianookdp.github.io/scammeter/) · [code](https://github.com/lucianookdp/scammeter) |
-| **LostAndFound** | Lost and found system for schools and universities. My capstone project, with a guided demo. | [live](https://lucianookdp.github.io/LostAndFound/) · [code](https://github.com/lucianookdp/LostAndFound) |
+**[cnpj-due-diligence](https://github.com/lucianookdp/cnpj-due-diligence)** &nbsp;·&nbsp; [open it](https://lucianookdp.github.io/cnpj-due-diligence/)  
+Checks a Brazilian company before you do business with it: ownership graph, official restrictive lists and an explainable risk score.
+
+**[Rachaí](https://github.com/lucianookdp/rachai-web)** &nbsp;·&nbsp; [open it](https://userachai.com.br)  
+A group logs shared expenses and gets back the fewest payments needed to settle up. No signup.
+
+**[Scammeter](https://github.com/lucianookdp/scammeter)** &nbsp;·&nbsp; [open it](https://lucianookdp.github.io/scammeter/)  
+Tells you whether a Brazilian site is a scam and why, by cross-checking the company, the domain and the payment key.
+
+**[LostAndFound](https://github.com/lucianookdp/LostAndFound)** &nbsp;·&nbsp; [open it](https://lucianookdp.github.io/LostAndFound/)  
+Lost and found system for schools and universities. My capstone project, with a guided demo.
 
 More at [lucianookdp.dev](https://lucianookdp.dev).
 
