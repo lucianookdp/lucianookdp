@@ -1,13 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="355" height="156" viewBox="0 0 355 156" font-family="'Cascadia Code', 'Fira Code', Consolas, monospace">
-  <rect x="0.5" y="0.5" width="354" height="155" rx="10" fill="#0d1117" stroke="#30363d" />
+<svg xmlns="http://www.w3.org/2000/svg" width="355" height="163" viewBox="0 0 355 163" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <rect x="0.5" y="0.5" width="354" height="162" rx="12" fill="#0d1117" stroke="#22272e" />
   <style>
-    .title { font-size: 15px; font-weight: 600; fill: #3fb950; }
-    .label { font-size: 12px; fill: #8b949e; }
-    .value { font-size: 12px; font-weight: 600; fill: #e6edf3; }
+    .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 1.3px; fill: #6e7681; }
+    .label { font-size: 12.5px; fill: #8b949e; }
+    .value { font-size: 12.5px; font-weight: 600; fill: #e6edf3; }
+    .metric { font-size: 22px; font-weight: 600; fill: #e6edf3; }
+    .quote { font-size: 14px; font-weight: 400; fill: #e6edf3; }
+    .rule { stroke: #1b2026; stroke-width: 1; }
   </style>
-  <text x="20" y="28" class="title">GitHub Stats</text>
-  <text x="20" y="56" class="label">Total repositories</text><text x="335" y="56" text-anchor="end" class="value">17</text>
-  <text x="20" y="82" class="label">Total stars</text><text x="335" y="82" text-anchor="end" class="value">1</text>
-  <text x="20" y="108" class="label">Followers</text><text x="335" y="108" text-anchor="end" class="value">17</text>
-  <text x="20" y="134" class="label">Contributions</text><text x="335" y="134" text-anchor="end" class="value">370</text>
+  <text x="22" y="30" class="eyebrow">GITHUB</text>
+  <text x="22" y="64" class="label">Repositories</text><text x="333" y="64" text-anchor="end" class="value">17</text>
+  <line x1="22" x2="333" y1="73" y2="73" class="rule" /><text x="22" y="91" class="label">Stars</text><text x="333" y="91" text-anchor="end" class="value">1</text>
+  <line x1="22" x2="333" y1="100" y2="100" class="rule" /><text x="22" y="118" class="label">Followers</text><text x="333" y="118" text-anchor="end" class="value">17</text>
+  <line x1="22" x2="333" y1="127" y2="127" class="rule" /><text x="22" y="145" class="label">Contributions (last year)</text><text x="333" y="145" text-anchor="end" class="value">370</text>
 </svg>

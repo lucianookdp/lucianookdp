@@ -1,22 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="355" height="156" viewBox="0 0 355 156" font-family="'Cascadia Code', 'Fira Code', Consolas, monospace">
-  <rect x="0.5" y="0.5" width="354" height="155" rx="10" fill="#0d1117" stroke="#30363d" />
+<svg xmlns="http://www.w3.org/2000/svg" width="355" height="163" viewBox="0 0 355 163" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <rect x="0.5" y="0.5" width="354" height="162" rx="12" fill="#0d1117" stroke="#22272e" />
   <style>
-    .title { font-size: 15px; font-weight: 600; fill: #3fb950; }
-    .label { font-size: 12px; fill: #8b949e; }
-    .value { font-size: 12px; font-weight: 600; fill: #e6edf3; }
+    .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 1.3px; fill: #6e7681; }
+    .label { font-size: 12.5px; fill: #8b949e; }
+    .value { font-size: 12.5px; font-weight: 600; fill: #e6edf3; }
+    .metric { font-size: 22px; font-weight: 600; fill: #e6edf3; }
+    .quote { font-size: 14px; font-weight: 400; fill: #e6edf3; }
+    .rule { stroke: #1b2026; stroke-width: 1; }
   </style>
-  <text x="20" y="28" class="title">Most Used Languages</text>
-  <rect x="20" y="48" width="315" height="8" rx="4" fill="#21262d" />
-  <rect x="20" y="48" width="111.70459739003492" height="8" fill="#3178c6" />
-  <rect x="131.7045973900349" y="48" width="93.35353001992307" height="8" fill="#f1e05a" />
-  <rect x="225.058127409958" y="48" width="49.360287885981535" height="8" fill="#3572A5" />
-  <rect x="274.41841529593955" y="48" width="36.43157605150709" height="8" fill="#563d7c" />
-  <rect x="310.84999134744663" y="48" width="17.8173379421122" height="8" fill="#ff5a03" />
-  <rect x="328.66732928955884" y="48" width="6.3326707104411915" height="8" fill="#e34c26" />
-  <circle cx="20" cy="76" r="5" fill="#3178c6" /><text x="32" y="80" class="label">TypeScript <tspan fill="#8b949e">35.5%</tspan></text>
-  <circle cx="190" cy="76" r="5" fill="#f1e05a" /><text x="202" y="80" class="label">JavaScript <tspan fill="#8b949e">29.6%</tspan></text>
-  <circle cx="20" cy="98" r="5" fill="#3572A5" /><text x="32" y="102" class="label">Python <tspan fill="#8b949e">15.7%</tspan></text>
-  <circle cx="190" cy="98" r="5" fill="#563d7c" /><text x="202" y="102" class="label">CSS <tspan fill="#8b949e">11.6%</tspan></text>
-  <circle cx="20" cy="120" r="5" fill="#ff5a03" /><text x="32" y="124" class="label">Astro <tspan fill="#8b949e">5.7%</tspan></text>
-  <circle cx="190" cy="120" r="5" fill="#e34c26" /><text x="202" y="124" class="label">HTML <tspan fill="#8b949e">2.0%</tspan></text>
+  <text x="22" y="30" class="eyebrow">LANGUAGES</text>
+  <rect x="22" y="52" width="311" height="8" rx="4" fill="#21262d" />
+  <rect x="22" y="52" width="110.29" height="8" fill="#3178c6" />
+  <rect x="132.29" y="52" width="91.96" height="8" fill="#f1e05a" />
+  <rect x="224.25" y="52" width="48.78" height="8" fill="#3572A5" />
+  <rect x="273.03" y="52" width="36.04" height="8" fill="#563d7c" />
+  <rect x="309.07" y="52" width="17.71" height="8" fill="#ff5a03" />
+  <rect x="326.78" y="52" width="6.21" height="8" fill="#e34c26" />
+  <rect x="22" y="77" width="8" height="8" rx="2" fill="#3178c6" /><text x="38" y="86" class="label"><tspan fill="#e6edf3">TypeScript</tspan> 35.5%</text>
+  <rect x="188" y="77" width="8" height="8" rx="2" fill="#f1e05a" /><text x="204" y="86" class="label"><tspan fill="#e6edf3">JavaScript</tspan> 29.6%</text>
+  <rect x="22" y="101" width="8" height="8" rx="2" fill="#3572A5" /><text x="38" y="110" class="label"><tspan fill="#e6edf3">Python</tspan> 15.7%</text>
+  <rect x="188" y="101" width="8" height="8" rx="2" fill="#563d7c" /><text x="204" y="110" class="label"><tspan fill="#e6edf3">CSS</tspan> 11.6%</text>
+  <rect x="22" y="125" width="8" height="8" rx="2" fill="#ff5a03" /><text x="38" y="134" class="label"><tspan fill="#e6edf3">Astro</tspan> 5.7%</text>
+  <rect x="188" y="125" width="8" height="8" rx="2" fill="#e34c26" /><text x="204" y="134" class="label"><tspan fill="#e6edf3">HTML</tspan> 2.0%</text>
 </svg>

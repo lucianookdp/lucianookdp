@@ -1,11 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="355" height="96" viewBox="0 0 355 96" font-family="'Cascadia Code', 'Fira Code', Consolas, monospace">
-  <rect x="0.5" y="0.5" width="354" height="95" rx="10" fill="#0d1117" stroke="#30363d" />
+<svg xmlns="http://www.w3.org/2000/svg" width="730" height="116" viewBox="0 0 730 116" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <rect x="0.5" y="0.5" width="729" height="115" rx="12" fill="#0d1117" stroke="#22272e" />
   <style>
-    .title { font-size: 15px; font-weight: 600; fill: #3fb950; }
-    .label { font-size: 12px; fill: #8b949e; }
-    .value { font-size: 12px; font-weight: 600; fill: #e6edf3; }
+    .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 1.3px; fill: #6e7681; }
+    .label { font-size: 12.5px; fill: #8b949e; }
+    .value { font-size: 12.5px; font-weight: 600; fill: #e6edf3; }
+    .metric { font-size: 22px; font-weight: 600; fill: #e6edf3; }
+    .quote { font-size: 14px; font-weight: 400; fill: #e6edf3; }
+    .rule { stroke: #1b2026; stroke-width: 1; }
   </style>
-  <text x="20" y="28" class="title">Contribution Streak</text>
-  <text x="88.75" y="60" text-anchor="middle" class="value" font-size="20" fill="#e6edf3">0</text><text x="88.75" y="80" text-anchor="middle" class="label">Current streak</text>
-  <text x="266.25" y="60" text-anchor="middle" class="value" font-size="20" fill="#e6edf3">5</text><text x="266.25" y="80" text-anchor="middle" class="label">Longest streak</text>
+  <text x="22" y="30" class="eyebrow">CONTRIBUTION STREAK</text>
+  <line x1="365" x2="365" y1="50" y2="98" class="rule" />
+  <text x="182.5" y="76" text-anchor="middle" class="metric">0</text><text x="182.5" y="96" text-anchor="middle" class="label">Current streak</text>
+  <text x="547.5" y="76" text-anchor="middle" class="metric">5</text><text x="547.5" y="96" text-anchor="middle" class="label">Longest streak</text>
 </svg>

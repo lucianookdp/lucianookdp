@@ -1,16 +1,16 @@
 <h1 align="center">Luciano K. Dal Pai</h1>
 
 <p align="center">
-  Full-stack software engineer based in Brazil.<br />
-  I build web and mobile apps from the database to the interface.
+  Full-stack software engineer, based in Brazil.<br />
+  I build web and mobile products end to end, from the database to the interface.
 </p>
 
 <p align="center">
   <a href="https://lucianookdp.dev">
-    <img src="https://img.shields.io/badge/Portfolio-lucianookdp.dev-1f883d?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio" />
+    <img src="https://img.shields.io/badge/Portfolio-lucianookdp.dev-1f2328?style=flat-square&logo=googlechrome&logoColor=white" alt="Portfolio" />
   </a>
   <a href="mailto:engslucianok@gmail.com">
-    <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+    <img src="https://img.shields.io/badge/Email-engslucianok@gmail.com-1f2328?style=flat-square&logo=gmail&logoColor=white" alt="Email" />
   </a>
 </p>
 
@@ -47,23 +47,23 @@
   <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
 </p>
 
-## Projects
+## Selected work
 
-**[cnpj-due-diligence](https://github.com/lucianookdp/cnpj-due-diligence)** &nbsp;·&nbsp; [open it](https://lucianookdp.github.io/cnpj-due-diligence/)  
+**[cnpj-due-diligence](https://github.com/lucianookdp/cnpj-due-diligence)** &nbsp;·&nbsp; [live](https://lucianookdp.github.io/cnpj-due-diligence/)  
 Checks a Brazilian company before you do business with it: ownership graph, official restrictive lists and an explainable risk score.
 
-**[Rachaí](https://github.com/lucianookdp/rachai-web)** &nbsp;·&nbsp; [open it](https://userachai.com.br)  
+**[Rachaí](https://github.com/lucianookdp/rachai-web)** &nbsp;·&nbsp; [live](https://userachai.com.br)  
 A group logs shared expenses and gets back the fewest payments needed to settle up. No signup.
 
-**[Scammeter](https://github.com/lucianookdp/scammeter)** &nbsp;·&nbsp; [open it](https://lucianookdp.github.io/scammeter/)  
+**[Scammeter](https://github.com/lucianookdp/scammeter)** &nbsp;·&nbsp; [live](https://lucianookdp.github.io/scammeter/)  
 Tells you whether a Brazilian site is a scam and why, by cross-checking the company, the domain and the payment key.
 
-**[LostAndFound](https://github.com/lucianookdp/LostAndFound)** &nbsp;·&nbsp; [open it](https://lucianookdp.github.io/LostAndFound/)  
+**[LostAndFound](https://github.com/lucianookdp/LostAndFound)** &nbsp;·&nbsp; [live](https://lucianookdp.github.io/LostAndFound/)  
 Lost and found system for schools and universities. My capstone project, with a guided demo.
 
 More at [lucianookdp.dev](https://lucianookdp.dev).
 
-## GitHub stats
+## GitHub
 
 <p align="center">
   <img src="assets/stats.svg" alt="GitHub stats" />
@@ -82,6 +82,6 @@ More at [lucianookdp.dev](https://lucianookdp.dev).
   <sub>
     Cards are self-hosted and refreshed daily by <a href="./.github/workflows">GitHub Actions</a>
     &nbsp;·&nbsp;
-    <img src="https://komarev.com/ghpvc/?username=lucianookdp&color=1f883d&style=flat-square&label=views" height="20" alt="profile views" align="absmiddle" />
+    <img src="https://komarev.com/ghpvc/?username=lucianookdp&color=30363d&style=flat-square&label=profile%20views" height="20" alt="profile views" align="absmiddle" />
   </sub>
 </p>
