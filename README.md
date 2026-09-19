@@ -1,64 +1,73 @@
 <h1 align="center">Luciano K. Dal Pai</h1>
 
 <p align="center">
-  <img src="assets/header.svg" alt="Software engineer & full-stack developer" />
+  Full-stack software engineer based in Brazil.<br />
+  I build web and mobile apps from the database to the interface.
 </p>
 
 <p align="center">
   <a href="https://lucianookdp.dev">
-    <img src="https://img.shields.io/badge/Portfolio-lucianookdp.dev-0c0c0c?style=flat-square&logo=googlechrome&logoColor=1e8e56&labelColor=0c0c0c" alt="Portfolio" />
+    <img src="https://img.shields.io/badge/Portfolio-lucianookdp.dev-1f883d?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio" />
   </a>
   <a href="mailto:engslucianok@gmail.com">
-    <img src="https://img.shields.io/badge/Email-engslucianok%40gmail.com-0c0c0c?style=flat-square&logo=gmail&logoColor=1e8e56&labelColor=0c0c0c" alt="Email" />
+    <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
-</p>
-
-<p align="center">
-  <img src="assets/terminal.svg" alt="whoami" />
 </p>
 
 ## Languages
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Go-0c0c0c?style=flat-square&logo=go&logoColor=1e8e56" alt="Go" />
-  <img src="https://img.shields.io/badge/TypeScript-0c0c0c?style=flat-square&logo=typescript&logoColor=1e8e56" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/JavaScript-0c0c0c?style=flat-square&logo=javascript&logoColor=1e8e56" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/Python-0c0c0c?style=flat-square&logo=python&logoColor=1e8e56" alt="Python" />
-  <img src="https://img.shields.io/badge/PHP-0c0c0c?style=flat-square&logo=php&logoColor=1e8e56" alt="PHP" />
-  <img src="https://img.shields.io/badge/C%23-0c0c0c?style=flat-square&logo=csharp&logoColor=1e8e56" alt="C#" />
-  <img src="https://img.shields.io/badge/Dart-0c0c0c?style=flat-square&logo=dart&logoColor=1e8e56" alt="Dart" />
-  <img src="https://img.shields.io/badge/C-0c0c0c?style=flat-square&logo=c&logoColor=1e8e56" alt="C" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go" />
+  <img src="https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP" />
+  <img src="https://img.shields.io/badge/C%23-239120?style=flat-square&logo=csharp&logoColor=white" alt="C#" />
+  <img src="https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white" alt="Dart" />
+  <img src="https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black" alt="C" />
 </p>
 
-## Frameworks & tools
+## Frameworks and tools
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Node.js-0c0c0c?style=flat-square&logo=nodedotjs&logoColor=1e8e56" alt="Node.js" />
-  <img src="https://img.shields.io/badge/Express-0c0c0c?style=flat-square&logo=express&logoColor=1e8e56" alt="Express" />
-  <img src="https://img.shields.io/badge/React-0c0c0c?style=flat-square&logo=react&logoColor=1e8e56" alt="React" />
-  <img src="https://img.shields.io/badge/Astro-0c0c0c?style=flat-square&logo=astro&logoColor=1e8e56" alt="Astro" />
-  <img src="https://img.shields.io/badge/Vite-0c0c0c?style=flat-square&logo=vite&logoColor=1e8e56" alt="Vite" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-0c0c0c?style=flat-square&logo=tailwindcss&logoColor=1e8e56" alt="Tailwind CSS" />
-  <img src="https://img.shields.io/badge/Laravel-0c0c0c?style=flat-square&logo=laravel&logoColor=1e8e56" alt="Laravel" />
-  <img src="https://img.shields.io/badge/Flutter-0c0c0c?style=flat-square&logo=flutter&logoColor=1e8e56" alt="Flutter" />
-  <img src="https://img.shields.io/badge/PostgreSQL-0c0c0c?style=flat-square&logo=postgresql&logoColor=1e8e56" alt="PostgreSQL" />
-  <img src="https://img.shields.io/badge/MySQL-0c0c0c?style=flat-square&logo=mysql&logoColor=1e8e56" alt="MySQL" />
-  <img src="https://img.shields.io/badge/Firebase-0c0c0c?style=flat-square&logo=firebase&logoColor=1e8e56" alt="Firebase" />
-  <img src="https://img.shields.io/badge/Git-0c0c0c?style=flat-square&logo=git&logoColor=1e8e56" alt="Git" />
+  <img src="https://img.shields.io/badge/Node.js-5FA04E?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" />
+  <img src="https://img.shields.io/badge/Astro-FF5D01?style=flat-square&logo=astro&logoColor=white" alt="Astro" />
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Fastify-000000?style=flat-square&logo=fastify&logoColor=white" alt="Fastify" />
+  <img src="https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white" alt="Express" />
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI" />
+  <img src="https://img.shields.io/badge/Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white" alt="Laravel" />
+  <img src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white" alt="Flutter" />
+  <img src="https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white" alt="Prisma" />
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL" />
+  <img src="https://img.shields.io/badge/Firebase-DD2C00?style=flat-square&logo=firebase&logoColor=white" alt="Firebase" />
+  <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
 </p>
+
+## Projects
+
+| | What it does | |
+| --- | --- | --- |
+| **cnpj-due-diligence** | Checks a Brazilian company before you do business with it: ownership graph, official restrictive lists and an explainable risk score. | [live](https://lucianookdp.github.io/cnpj-due-diligence/) · [code](https://github.com/lucianookdp/cnpj-due-diligence) |
+| **Rachaí** | A group logs shared expenses and gets back the fewest payments needed to settle up. No signup. | [live](https://userachai.com.br) · [code](https://github.com/lucianookdp/rachai-web) |
+| **Scammeter** | Tells you whether a Brazilian site is a scam and why, by cross-checking the company, the domain and the payment key. | [live](https://lucianookdp.github.io/scammeter/) · [code](https://github.com/lucianookdp/scammeter) |
+| **LostAndFound** | Lost and found system for schools and universities. My capstone project, with a guided demo. | [live](https://lucianookdp.github.io/LostAndFound/) · [code](https://github.com/lucianookdp/LostAndFound) |
+
+More at [lucianookdp.dev](https://lucianookdp.dev).
 
 ## GitHub stats
 
 <p align="center">
   <img src="assets/stats.svg" alt="GitHub stats" />
-  <img src="assets/top-langs.svg" alt="Top languages" />
+  <img src="assets/top-langs.svg" alt="Most used languages" />
 </p>
 
 <p align="center">
   <img src="assets/streak.svg" alt="Contribution streak" />
 </p>
-
-## Quote of the day
 
 <p align="center">
   <img src="assets/quote.svg" alt="Quote of the day" />
@@ -66,8 +75,8 @@
 
 <p align="center">
   <sub>
-    Self-hosted, refreshed automatically via <a href="./.github/workflows">GitHub Actions</a>
+    Cards are self-hosted and refreshed daily by <a href="./.github/workflows">GitHub Actions</a>
     &nbsp;·&nbsp;
-    <img src="https://komarev.com/ghpvc/?username=lucianookdp&color=1a1a1a&style=flat-square&label=views&labelColor=0c0c0c" height="12" alt="profile views" align="absmiddle" />
+    <img src="https://komarev.com/ghpvc/?username=lucianookdp&color=1f883d&style=flat-square&label=views" height="20" alt="profile views" align="absmiddle" />
   </sub>
 </p>
