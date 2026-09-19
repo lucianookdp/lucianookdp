@@ -1,13 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="520" height="128" viewBox="0 0 520 128" font-family="'Cascadia Code', 'Fira Code', Consolas, monospace">
-  <rect x="0.5" y="0.5" width="519" height="127" rx="10" fill="#0d1117" stroke="#30363d" />
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="128" viewBox="0 0 520 128" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <rect x="0.5" y="0.5" width="519" height="127" rx="12" fill="#0d1117" stroke="#22272e" />
   <style>
-    .title { font-size: 15px; font-weight: 600; fill: #3fb950; }
-    .label { font-size: 12px; fill: #8b949e; }
-    .value { font-size: 12px; font-weight: 600; fill: #e6edf3; }
+    .title { font-size: 14px; font-weight: 600; fill: #e6edf3; }
+    .label { font-size: 12.5px; fill: #8b949e; }
+    .value { font-size: 12.5px; font-weight: 600; fill: #e6edf3; }
+    .quote { font-size: 14px; font-weight: 400; fill: #e6edf3; }
   </style>
-  <text x="20" y="28" class="title">Quote of the day</text>
-  <text x="20" y="56" class="value" font-weight="400">This is the process by which the mind achieves knowledge of</text>
-  <text x="20" y="78" class="value" font-weight="400">the eternal, unchanging Forms.</text>
-  <text x="20" y="108" class="label">Plato</text>
-  <text x="500" y="108" class="label" text-anchor="end">day 262 of 365</text>
+  <text x="22" y="30" class="title">Quote of the day</text>
+  <text x="22" y="58" class="quote">This is the process by which the mind achieves knowledge of</text>
+  <text x="22" y="80" class="quote">the eternal, unchanging Forms.</text>
+  <text x="22" y="110" class="label">Plato</text>
+  <text x="498" y="110" class="label" text-anchor="end">day 262 of 365</text>
 </svg>
