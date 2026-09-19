@@ -1,20 +1,21 @@
 #!/usr/bin/env node
-// Generates self-hosted stats/top-languages/streak/terminal SVG cards for the
-// profile README, replacing the flaky github-readme-stats.vercel.app service.
-// Runs on GitHub Actions with the default GITHUB_TOKEN — no PAT needed.
+// Generates self-hosted stats, top-languages, streak and quote SVG cards for
+// the profile README, replacing the flaky github-readme-stats.vercel.app
+// service. Runs on GitHub Actions with the default GITHUB_TOKEN, no PAT needed.
 //
-// Single fixed black + green palette everywhere (no light/dark variants) —
-// the whole README is meant to read as one minimalist black/green design.
+// One fixed dark palette for the card chrome, the same tones GitHub uses, so
+// the cards sit well on both the light and the dark theme. Languages are drawn
+// in their own brand colours.
 
 const USERNAME = process.env.PROFILE_USER || "lucianookdp";
 const TOKEN = process.env.GITHUB_TOKEN;
 
-const ACCENT = "#1e8e56";
-const BG = "#0c0c0c";
-const BORDER = "#2b2b2b";
-const FG = "#e6e6e6";
-const MUTED = "#8a8a8a";
-const TRACK = "#1f1f1f";
+const ACCENT = "#3fb950";
+const BG = "#0d1117";
+const BORDER = "#30363d";
+const FG = "#e6edf3";
+const MUTED = "#8b949e";
+const TRACK = "#21262d";
 
 if (!TOKEN) {
   console.error("Missing GITHUB_TOKEN");
@@ -171,10 +172,41 @@ function topLangsCardHeight(totals) {
   return 80 + rows * 22 - 6;
 }
 
+// Cor de marca de cada linguagem, as mesmas que o GitHub usa no linguist.
+const LANG_COLORS = {
+  TypeScript: "#3178c6",
+  JavaScript: "#f1e05a",
+  Python: "#3572A5",
+  PHP: "#4F5D95",
+  "C#": "#178600",
+  Dart: "#00B4AB",
+  C: "#555555",
+  Go: "#00ADD8",
+  Astro: "#ff5a03",
+  HTML: "#e34c26",
+  CSS: "#563d7c",
+  SCSS: "#c6538c",
+  Blade: "#f7523f",
+  Shell: "#89e051",
+  Java: "#b07219",
+  Ruby: "#701516",
+  Rust: "#dea584",
+  Swift: "#F05138",
+  Kotlin: "#A97BFF",
+  Vue: "#41b883",
+  Svelte: "#ff3e00",
+  Jupyter: "#DA5B0B",
+  "Jupyter Notebook": "#DA5B0B",
+  Dockerfile: "#384d54",
+  Makefile: "#427819",
+  "C++": "#f34b7d",
+};
+const corDaLinguagem = (lang, i) =>
+  LANG_COLORS[lang] || ["#8b949e", "#6e7681", "#484f58"][i % 3];
+
 function topLangsCard(totals, minHeight) {
   const sorted = [...totals.entries()].sort((a, b) => b[1] - a[1]).slice(0, 6);
   const total = sorted.reduce((sum, [, bytes]) => sum + bytes, 0);
-  const palette = ["#1e8e56", "#3fb27f", "#6fcf9e", "#a3e0bf", FG, MUTED];
 
   const barWidth = 315;
   let track = `<rect x="20" y="48" width="${barWidth}" height="8" rx="4" fill="${TRACK}" />`;
@@ -182,7 +214,7 @@ function topLangsCard(totals, minHeight) {
   const segments = sorted
     .map(([lang, bytes], i) => {
       const w = total > 0 ? (bytes / total) * barWidth : 0;
-      const rect = `<rect x="${x}" y="48" width="${w}" height="8" fill="${palette[i % palette.length]}" />`;
+      const rect = `<rect x="${x}" y="48" width="${w}" height="8" fill="${corDaLinguagem(lang, i)}" />`;
       x += w;
       return rect;
     })
@@ -195,7 +227,7 @@ function topLangsCard(totals, minHeight) {
       const row = Math.floor(i / 2);
       const lx = 20 + col * 170;
       const ly = 80 + row * 22;
-      return `<circle cx="${lx}" cy="${ly - 4}" r="5" fill="${palette[i % palette.length]}" /><text x="${lx + 12}" y="${ly}" class="label">${escapeXml(lang)} <tspan fill="${MUTED}">${pct}%</tspan></text>`;
+      return `<circle cx="${lx}" cy="${ly - 4}" r="5" fill="${corDaLinguagem(lang, i)}" /><text x="${lx + 12}" y="${ly}" class="label">${escapeXml(lang)} <tspan fill="${MUTED}">${pct}%</tspan></text>`;
     })
     .join("\n  ");
 
@@ -217,150 +249,6 @@ function streakCard({ current, longest }) {
     })
     .join("\n  ");
   return card({ title: "Contribution Streak", width: 355, height: 96, body });
-}
-
-// ---- Windows Terminal (PowerShell) card ----
-
-const CHAR_W = 8.3; // approx monospace advance at font-size 13 (generous for font fallback)
-const PX_PER_SEC = 320; // typing speed
-const CLIP_PAD = 30; // safety margin so the last glyph never gets clipped
-const PROMPT_STR = "PS C:\\Users\\luciano>";
-
-function windowsChrome({ width, titleText }) {
-  return `
-    <rect x="0.5" y="0.5" width="${width - 1}" height="31" rx="8" fill="${TRACK}" />
-    <rect x="0.5" y="23" width="${width - 1}" height="8" fill="${TRACK}" />
-    <rect x="16" y="11" width="5" height="5" fill="${ACCENT}" />
-    <rect x="23" y="11" width="5" height="5" fill="${MUTED}" />
-    <rect x="16" y="18" width="5" height="5" fill="${MUTED}" />
-    <rect x="23" y="18" width="5" height="5" fill="${ACCENT}" />
-    <text x="38" y="21" font-size="12" fill="${FG}">${escapeXml(titleText)}</text>
-    <line x1="${width - 62}" y1="16" x2="${width - 51}" y2="16" stroke="${MUTED}" stroke-width="1.2" />
-    <rect x="${width - 40}" y="10" width="11" height="11" fill="none" stroke="${MUTED}" stroke-width="1.2" />
-    <line x1="${width - 24}" y1="10" x2="${width - 13}" y2="21" stroke="${MUTED}" stroke-width="1.2" />
-    <line x1="${width - 13}" y1="10" x2="${width - 24}" y2="21" stroke="${MUTED}" stroke-width="1.2" />`;
-}
-
-// Builds the SMIL clip-path chain that reveals each line of `lineDefs`
-// (each { y, width, render }) one after another, like it's being typed.
-// `ns` namespaces every id so multiple animated cards can sit on the same
-// page without their SMIL ids/timelines colliding with each other.
-function buildTypedLines(lineDefs, ns, startId) {
-  let prevId = startId;
-  const clipDefs = [];
-  const rendered = [];
-  let lastId = prevId;
-  lineDefs.forEach((line, i) => {
-    const id = `${ns}rev${i}`;
-    const dur = Math.max(0.18, line.width / PX_PER_SEC).toFixed(2);
-    clipDefs.push(`<clipPath id="${ns}clip${i}"><rect x="0" y="${line.y - 15}" width="0" height="19">
-      <animate id="${id}" attributeName="width" from="0" to="${line.width.toFixed(0)}" dur="${dur}s" begin="${prevId}.end" fill="freeze" calcMode="linear" />
-    </rect></clipPath>`);
-    rendered.push(`<g clip-path="url(#${ns}clip${i})">${line.render}</g>`);
-    prevId = id;
-    lastId = id;
-  });
-  return { clipDefs, rendered, lastId };
-}
-
-function blinkCursor(x, y, lastId) {
-  return `<rect x="${x.toFixed(0)}" y="${y - 12}" width="7" height="14" fill="${ACCENT}" opacity="0">
-    <animate attributeName="opacity" values="1;0" calcMode="discrete" dur="1s" begin="${lastId}.end" repeatCount="indefinite" />
-  </rect>`;
-}
-
-function terminalCard(topLanguage) {
-  const width = 400;
-  const lineHeight = 22;
-  const fields = [
-    ["os", "Windows 11"],
-    ["shell", "PowerShell 7"],
-    ["editor", "VS Code"],
-    ["top_lang", topLanguage],
-  ];
-
-  let y = 58;
-  const lineDefs = [];
-
-  const cmd1 = `${PROMPT_STR} whoami`;
-  lineDefs.push({
-    y,
-    width: cmd1.length * CHAR_W + CLIP_PAD,
-    render: `<text x="16" y="${y}" font-size="13"><tspan fill="${ACCENT}">${escapeXml(PROMPT_STR)}</tspan><tspan fill="${FG}"> whoami</tspan></text>`,
-  });
-  y += lineHeight;
-
-  fields.forEach(([key, value]) => {
-    lineDefs.push({
-      y,
-      width: 130 + String(value).length * CHAR_W + CLIP_PAD,
-      render: `<text x="16" y="${y}" font-size="13"><tspan fill="${ACCENT}">${escapeXml(key)}</tspan><tspan fill="${MUTED}">:</tspan><tspan fill="${FG}" x="130">${escapeXml(value)}</tspan></text>`,
-    });
-    y += lineHeight;
-  });
-
-  const height = y + 18;
-  const { clipDefs, rendered, lastId } = buildTypedLines(lineDefs, "term", "termWinIn");
-  const last = lineDefs[lineDefs.length - 1];
-  const cursor = blinkCursor(16 + last.width - CLIP_PAD + 6, last.y, lastId);
-
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" font-family="'Cascadia Code', 'Fira Code', Consolas, monospace">
-  <defs>
-    ${clipDefs.join("\n    ")}
-  </defs>
-  <g opacity="0">
-    <animate id="termWinIn" attributeName="opacity" from="0" to="1" dur="0.35s" begin="0s" fill="freeze" />
-    <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="8" fill="${BG}" stroke="${BORDER}" />
-    ${windowsChrome({ width, titleText: "Windows PowerShell" })}
-  </g>
-  ${rendered.join("\n  ")}
-  ${cursor}
-</svg>`;
-}
-
-// Self-hosted replacement for the readme-typing-svg.demolab.com widget,
-// which occasionally renders with overlapping lines (third-party bug).
-// Plain centered text, no window chrome, types once and ends on a cursor.
-function headerCard(tagline) {
-  const width = 460;
-  const height = 40;
-  const fontSize = 16;
-  const charW = 9.4;
-  const textWidth = tagline.length * charW;
-  const startX = (width - textWidth) / 2;
-  const y = height / 2 + fontSize / 3;
-
-  const lineDefs = [
-    {
-      y,
-      width: textWidth + CLIP_PAD,
-      render: `<text x="${startX.toFixed(1)}" y="${y}" font-size="${fontSize}" fill="${ACCENT}">${escapeXml(tagline)}</text>`,
-      clipX: startX,
-    },
-  ];
-
-  let prevId = "hdrWinIn";
-  const clipDefs = [];
-  const rendered = [];
-  let lastId = prevId;
-  lineDefs.forEach((line, i) => {
-    const id = `hrev${i}`;
-    const dur = Math.max(0.3, line.width / PX_PER_SEC).toFixed(2);
-    clipDefs.push(`<clipPath id="hclip${i}"><rect x="${line.clipX.toFixed(1)}" y="${line.y - fontSize}" width="0" height="${fontSize + 8}">
-      <animate id="${id}" attributeName="width" from="0" to="${line.width.toFixed(0)}" dur="${dur}s" begin="${prevId}.end" fill="freeze" calcMode="linear" />
-    </rect></clipPath>`);
-    rendered.push(`<g clip-path="url(#hclip${i})">${line.render}</g>`);
-    prevId = id;
-    lastId = id;
-  });
-
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" font-family="'Cascadia Code', 'Fira Code', Consolas, monospace">
-  <defs>
-    ${clipDefs.join("\n    ")}
-  </defs>
-  <rect width="0" height="0"><animate id="hdrWinIn" attributeName="width" from="0" to="0" dur="0.01s" begin="0s" fill="freeze" /></rect>
-  ${rendered.join("\n  ")}
-</svg>`;
 }
 
 // ---- Quote of the day (day-of-year -> fixed quote, no randomness) ----
@@ -400,62 +288,27 @@ async function loadQuotes() {
 function quoteCard(quote, dayNum, totalDays) {
   const width = 520;
   const lineHeight = 22;
-  const maxChars = 56;
+  const linhas = wrapText(quote.text, 60);
 
-  let y = 58;
-  const lineDefs = [];
+  let y = 56;
+  const corpo = linhas
+    .map((linha) => {
+      const t = `<text x="20" y="${y}" class="value" font-weight="400">${escapeXml(linha)}</text>`;
+      y += lineHeight;
+      return t;
+    })
+    .join("\n  ");
 
-  const cmd = `${PROMPT_STR} Get-Quote`;
-  lineDefs.push({
-    y,
-    width: cmd.length * CHAR_W + CLIP_PAD,
-    render: `<text x="16" y="${y}" font-size="13"><tspan fill="${ACCENT}">${escapeXml(PROMPT_STR)}</tspan><tspan fill="${FG}"> Get-Quote</tspan></text>`,
+  const autor = `<text x="20" y="${y + 8}" class="label">${escapeXml(quote.author || "Unknown")}</text>`;
+  const dia = `<text x="${width - 20}" y="${y + 8}" class="label" text-anchor="end">day ${dayNum} of ${totalDays}</text>`;
+  const height = y + 28;
+
+  return card({
+    title: "Quote of the day",
+    width,
+    height,
+    body: `${corpo}\n  ${autor}\n  ${dia}`,
   });
-  y += lineHeight * 1.4;
-
-  const quoteLines = wrapText(`"${quote.text}"`, maxChars);
-  quoteLines.forEach((line) => {
-    lineDefs.push({
-      y,
-      width: line.length * CHAR_W + CLIP_PAD,
-      render: `<text x="16" y="${y}" font-size="13" fill="${FG}">${escapeXml(line)}</text>`,
-    });
-    y += lineHeight;
-  });
-
-  const authorLine = `— ${quote.author}`;
-  lineDefs.push({
-    y,
-    width: authorLine.length * CHAR_W + CLIP_PAD,
-    render: `<text x="16" y="${y}" font-size="13" fill="${ACCENT}">${escapeXml(authorLine)}</text>`,
-  });
-  y += lineHeight * 1.4;
-
-  const dayLine = `Day ${dayNum} of ${totalDays}`;
-  lineDefs.push({
-    y,
-    width: dayLine.length * CHAR_W + CLIP_PAD,
-    render: `<text x="16" y="${y}" font-size="12" fill="${MUTED}">${escapeXml(dayLine)}</text>`,
-  });
-  y += lineHeight;
-
-  const height = y + 18;
-  const { clipDefs, rendered, lastId } = buildTypedLines(lineDefs, "quote", "quoteWinIn");
-  const last = lineDefs[lineDefs.length - 1];
-  const cursor = blinkCursor(16 + last.width - CLIP_PAD + 6, last.y, lastId);
-
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" font-family="'Cascadia Code', 'Fira Code', Consolas, monospace">
-  <defs>
-    ${clipDefs.join("\n    ")}
-  </defs>
-  <g opacity="0">
-    <animate id="quoteWinIn" attributeName="opacity" from="0" to="1" dur="0.35s" begin="0s" fill="freeze" />
-    <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="8" fill="${BG}" stroke="${BORDER}" />
-    ${windowsChrome({ width, titleText: "Windows PowerShell" })}
-  </g>
-  ${rendered.join("\n  ")}
-  ${cursor}
-</svg>`;
 }
 
 async function main() {
@@ -475,10 +328,6 @@ async function main() {
   await fs.writeFile("assets/stats.svg", statsCard(statsData, matchedHeight));
   await fs.writeFile("assets/top-langs.svg", topLangsCard(languageTotals, matchedHeight));
   await fs.writeFile("assets/streak.svg", streakCard(streakData));
-  await fs.writeFile("assets/header.svg", headerCard("Software engineer & full-stack developer"));
-
-  const [topLanguage] = [...languageTotals.entries()].sort((a, b) => b[1] - a[1])[0] || ["N/A"];
-  await fs.writeFile("assets/terminal.svg", terminalCard(topLanguage));
 
   const quotes = await loadQuotes();
   const now = new Date();
@@ -487,7 +336,7 @@ async function main() {
   await fs.writeFile("assets/quote.svg", quoteCard(quote, doy, quotes.length));
 
   console.log(
-    "Generated assets/stats.svg, assets/top-langs.svg, assets/streak.svg, assets/terminal.svg, assets/quote.svg"
+    "Generated assets/stats.svg, assets/top-langs.svg, assets/streak.svg, assets/quote.svg"
   );
 }
 

@@ -1,22 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="355" height="156" viewBox="0 0 355 156" font-family="'Cascadia Code', 'Fira Code', Consolas, monospace">
-  <rect x="0.5" y="0.5" width="354" height="155" rx="10" fill="#0c0c0c" stroke="#2b2b2b" />
+  <rect x="0.5" y="0.5" width="354" height="155" rx="10" fill="#0d1117" stroke="#30363d" />
   <style>
-    .title { font-size: 15px; font-weight: 600; fill: #1e8e56; }
-    .label { font-size: 12px; fill: #8a8a8a; }
-    .value { font-size: 12px; font-weight: 600; fill: #e6e6e6; }
+    .title { font-size: 15px; font-weight: 600; fill: #3fb950; }
+    .label { font-size: 12px; fill: #8b949e; }
+    .value { font-size: 12px; font-weight: 600; fill: #e6edf3; }
   </style>
   <text x="20" y="28" class="title">Most Used Languages</text>
-  <rect x="20" y="48" width="315" height="8" rx="4" fill="#1f1f1f" />
-  <rect x="20" y="48" width="91.20367702061387" height="8" fill="#1e8e56" />
-  <rect x="111.20367702061387" y="48" width="88.36854053490626" height="8" fill="#3fb27f" />
-  <rect x="199.57221755552013" y="48" width="44.884000944240746" height="8" fill="#6fcf9e" />
-  <rect x="244.45621849976087" y="48" width="36.21216905588189" height="8" fill="#a3e0bf" />
-  <rect x="280.66838755564277" y="48" width="33.74303315879186" height="8" fill="#e6e6e6" />
-  <rect x="314.4114207144346" y="48" width="20.58857928556538" height="8" fill="#8a8a8a" />
-  <circle cx="20" cy="76" r="5" fill="#1e8e56" /><text x="32" y="80" class="label">TypeScript <tspan fill="#8a8a8a">29.0%</tspan></text>
-  <circle cx="190" cy="76" r="5" fill="#3fb27f" /><text x="202" y="80" class="label">JavaScript <tspan fill="#8a8a8a">28.1%</tspan></text>
-  <circle cx="20" cy="98" r="5" fill="#6fcf9e" /><text x="32" y="102" class="label">Python <tspan fill="#8a8a8a">14.2%</tspan></text>
-  <circle cx="190" cy="98" r="5" fill="#a3e0bf" /><text x="202" y="102" class="label">PHP <tspan fill="#8a8a8a">11.5%</tspan></text>
-  <circle cx="20" cy="120" r="5" fill="#e6e6e6" /><text x="32" y="124" class="label">CSS <tspan fill="#8a8a8a">10.7%</tspan></text>
-  <circle cx="190" cy="120" r="5" fill="#8a8a8a" /><text x="202" y="124" class="label">Blade <tspan fill="#8a8a8a">6.5%</tspan></text>
+  <rect x="20" y="48" width="315" height="8" rx="4" fill="#21262d" />
+  <rect x="20" y="48" width="111.70459739003492" height="8" fill="#3178c6" />
+  <rect x="131.7045973900349" y="48" width="93.35353001992307" height="8" fill="#f1e05a" />
+  <rect x="225.058127409958" y="48" width="49.360287885981535" height="8" fill="#3572A5" />
+  <rect x="274.41841529593955" y="48" width="36.43157605150709" height="8" fill="#563d7c" />
+  <rect x="310.84999134744663" y="48" width="17.8173379421122" height="8" fill="#ff5a03" />
+  <rect x="328.66732928955884" y="48" width="6.3326707104411915" height="8" fill="#e34c26" />
+  <circle cx="20" cy="76" r="5" fill="#3178c6" /><text x="32" y="80" class="label">TypeScript <tspan fill="#8b949e">35.5%</tspan></text>
+  <circle cx="190" cy="76" r="5" fill="#f1e05a" /><text x="202" y="80" class="label">JavaScript <tspan fill="#8b949e">29.6%</tspan></text>
+  <circle cx="20" cy="98" r="5" fill="#3572A5" /><text x="32" y="102" class="label">Python <tspan fill="#8b949e">15.7%</tspan></text>
+  <circle cx="190" cy="98" r="5" fill="#563d7c" /><text x="202" y="102" class="label">CSS <tspan fill="#8b949e">11.6%</tspan></text>
+  <circle cx="20" cy="120" r="5" fill="#ff5a03" /><text x="32" y="124" class="label">Astro <tspan fill="#8b949e">5.7%</tspan></text>
+  <circle cx="190" cy="120" r="5" fill="#e34c26" /><text x="202" y="124" class="label">HTML <tspan fill="#8b949e">2.0%</tspan></text>
 </svg>
