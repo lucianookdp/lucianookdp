@@ -7,8 +7,8 @@
     .quote { font-size: 14px; font-weight: 400; fill: #e6edf3; }
   </style>
   <text x="22" y="30" class="title">Quote of the day</text>
-  <text x="22" y="58" class="quote">A hero is born among a hundred, a wise man is found among a</text>
-  <text x="22" y="80" class="quote">thousand.</text>
+  <text x="22" y="58" class="quote">Astronomy compels the soul to look upward and leads us from</text>
+  <text x="22" y="80" class="quote">this world to another.</text>
   <text x="22" y="110" class="label">Plato</text>
-  <text x="498" y="110" class="label" text-anchor="end">day 264 of 365</text>
+  <text x="498" y="110" class="label" text-anchor="end">day 265 of 365</text>
 </svg>
