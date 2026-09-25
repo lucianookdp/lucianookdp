@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="520" height="128" viewBox="0 0 520 128" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
-  <rect x="0.5" y="0.5" width="519" height="127" rx="12" fill="#0d1117" stroke="#22272e" />
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="106" viewBox="0 0 520 106" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <rect x="0.5" y="0.5" width="519" height="105" rx="12" fill="#0d1117" stroke="#22272e" />
   <style>
     .title { font-size: 14px; font-weight: 600; fill: #e6edf3; }
     .label { font-size: 12.5px; fill: #8b949e; }
@@ -7,8 +7,7 @@
     .quote { font-size: 14px; font-weight: 400; fill: #e6edf3; }
   </style>
   <text x="22" y="30" class="title">Quote of the day</text>
-  <text x="22" y="58" class="quote">The direction in which education starts a man will determine</text>
-  <text x="22" y="80" class="quote">his future life.</text>
-  <text x="22" y="110" class="label">Plato</text>
-  <text x="498" y="110" class="label" text-anchor="end">day 267 of 365</text>
+  <text x="22" y="58" class="quote">Man — a being in search of meaning.</text>
+  <text x="22" y="88" class="label">Plato</text>
+  <text x="498" y="88" class="label" text-anchor="end">day 268 of 365</text>
 </svg>
