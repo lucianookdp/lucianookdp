@@ -7,8 +7,8 @@
     .quote { font-size: 14px; font-weight: 400; fill: #e6edf3; }
   </style>
   <text x="22" y="30" class="title">Quote of the day</text>
-  <text x="22" y="58" class="quote">Every heart sings a song, incomplete, until another heart</text>
-  <text x="22" y="80" class="quote">whispers back.</text>
+  <text x="22" y="58" class="quote">You can discover more about a person in an hour of play than</text>
+  <text x="22" y="80" class="quote">in a year of conversation.</text>
   <text x="22" y="110" class="label">Plato</text>
-  <text x="498" y="110" class="label" text-anchor="end">day 269 of 365</text>
+  <text x="498" y="110" class="label" text-anchor="end">day 270 of 365</text>
 </svg>
