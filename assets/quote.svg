@@ -7,8 +7,8 @@
     .quote { font-size: 14px; font-weight: 400; fill: #e6edf3; }
   </style>
   <text x="22" y="30" class="title">Quote of the day</text>
-  <text x="22" y="58" class="quote">You can discover more about a person in an hour of play than</text>
-  <text x="22" y="80" class="quote">in a year of conversation.</text>
+  <text x="22" y="58" class="quote">Wonder is the feeling of the philosopher, and philosophy</text>
+  <text x="22" y="80" class="quote">begins in wonder.</text>
   <text x="22" y="110" class="label">Plato</text>
-  <text x="498" y="110" class="label" text-anchor="end">day 270 of 365</text>
+  <text x="498" y="110" class="label" text-anchor="end">day 271 of 365</text>
 </svg>
