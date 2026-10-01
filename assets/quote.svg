@@ -7,7 +7,7 @@
     .quote { font-size: 14px; font-weight: 400; fill: #e6edf3; }
   </style>
   <text x="22" y="30" class="title">Quote of the day</text>
-  <text x="22" y="58" class="quote">A dog has the soul of a philosopher.</text>
+  <text x="22" y="58" class="quote">The greatest sign of a good life is the pursuit of virtue.</text>
   <text x="22" y="88" class="label">Plato</text>
-  <text x="498" y="88" class="label" text-anchor="end">day 273 of 365</text>
+  <text x="498" y="88" class="label" text-anchor="end">day 274 of 365</text>
 </svg>
