@@ -7,8 +7,8 @@
     .quote { font-size: 14px; font-weight: 400; fill: #e6edf3; }
   </style>
   <text x="22" y="30" class="title">Quote of the day</text>
-  <text x="22" y="58" class="quote">Ideas are like stars: we will never succeed in touching them,</text>
-  <text x="22" y="80" class="quote">but we choose them as our guides.</text>
-  <text x="22" y="110" class="label">Carl Schurz</text>
-  <text x="498" y="110" class="label" text-anchor="end">day 275 of 365</text>
+  <text x="22" y="58" class="quote">Remember that not getting what you want is sometimes a</text>
+  <text x="22" y="80" class="quote">wonderful stroke of luck.</text>
+  <text x="22" y="110" class="label">Dalai Lama</text>
+  <text x="498" y="110" class="label" text-anchor="end">day 276 of 365</text>
 </svg>
