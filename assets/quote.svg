@@ -7,7 +7,7 @@
     .quote { font-size: 14px; font-weight: 400; fill: #e6edf3; }
   </style>
   <text x="22" y="30" class="title">Quote of the day</text>
-  <text x="22" y="58" class="quote">Be kind whenever possible. It is always possible.</text>
+  <text x="22" y="58" class="quote">Open your arms to change, but don&#39;t let go of your values.</text>
   <text x="22" y="88" class="label">Dalai Lama</text>
-  <text x="498" y="88" class="label" text-anchor="end">day 277 of 365</text>
+  <text x="498" y="88" class="label" text-anchor="end">day 278 of 365</text>
 </svg>
