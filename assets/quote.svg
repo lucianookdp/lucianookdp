@@ -7,8 +7,8 @@
     .quote { font-size: 14px; font-weight: 400; fill: #e6edf3; }
   </style>
   <text x="22" y="30" class="title">Quote of the day</text>
-  <text x="22" y="58" class="quote">When you talk, you are only repeating what you already know.</text>
-  <text x="22" y="80" class="quote">But if you listen, you may learn something new.</text>
+  <text x="22" y="58" class="quote">Love and compassion are necessities, not luxuries. Without</text>
+  <text x="22" y="80" class="quote">them humanity cannot survive.</text>
   <text x="22" y="110" class="label">Dalai Lama</text>
-  <text x="498" y="110" class="label" text-anchor="end">day 280 of 365</text>
+  <text x="498" y="110" class="label" text-anchor="end">day 281 of 365</text>
 </svg>
