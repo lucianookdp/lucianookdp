@@ -7,7 +7,7 @@
     .quote { font-size: 14px; font-weight: 400; fill: #e6edf3; }
   </style>
   <text x="22" y="30" class="title">Quote of the day</text>
-  <text x="22" y="58" class="quote">Love all, trust a few, do wrong to none.</text>
+  <text x="22" y="58" class="quote">Better three hours too soon than a minute too late.</text>
   <text x="22" y="88" class="label">William Shakespeare</text>
-  <text x="498" y="88" class="label" text-anchor="end">day 287 of 365</text>
+  <text x="498" y="88" class="label" text-anchor="end">day 288 of 365</text>
 </svg>
