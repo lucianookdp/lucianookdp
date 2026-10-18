@@ -7,8 +7,8 @@
     .quote { font-size: 14px; font-weight: 400; fill: #e6edf3; }
   </style>
   <text x="22" y="30" class="title">Quote of the day</text>
-  <text x="22" y="58" class="quote">Our doubts are traitors, and make us lose the good we oft</text>
-  <text x="22" y="80" class="quote">might win.</text>
+  <text x="22" y="58" class="quote">Cowards die many times before their deaths; the valiant never</text>
+  <text x="22" y="80" class="quote">taste of death but once.</text>
   <text x="22" y="110" class="label">William Shakespeare</text>
-  <text x="498" y="110" class="label" text-anchor="end">day 290 of 365</text>
+  <text x="498" y="110" class="label" text-anchor="end">day 291 of 365</text>
 </svg>
