@@ -7,8 +7,8 @@
     .quote { font-size: 14px; font-weight: 400; fill: #e6edf3; }
   </style>
   <text x="22" y="30" class="title">Quote of the day</text>
-  <text x="22" y="58" class="quote">The fool doth think he is wise, but the wise man knows himself</text>
-  <text x="22" y="80" class="quote">to be a fool.</text>
-  <text x="22" y="110" class="label">William Shakespeare</text>
-  <text x="498" y="110" class="label" text-anchor="end">day 292 of 365</text>
+  <text x="22" y="58" class="quote">The most important thing is to enjoy your life, to be happy —</text>
+  <text x="22" y="80" class="quote">it&#39;s all that matters.</text>
+  <text x="22" y="110" class="label">Audrey Hepburn</text>
+  <text x="498" y="110" class="label" text-anchor="end">day 293 of 365</text>
 </svg>
