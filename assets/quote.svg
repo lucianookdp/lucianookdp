@@ -7,7 +7,7 @@
     .quote { font-size: 14px; font-weight: 400; fill: #e6edf3; }
   </style>
   <text x="22" y="30" class="title">Quote of the day</text>
-  <text x="22" y="58" class="quote">The best thing to hold onto in life is each other.</text>
+  <text x="22" y="58" class="quote">For beautiful eyes, look for the good in others.</text>
   <text x="22" y="88" class="label">Audrey Hepburn</text>
-  <text x="498" y="88" class="label" text-anchor="end">day 295 of 365</text>
+  <text x="498" y="88" class="label" text-anchor="end">day 296 of 365</text>
 </svg>
