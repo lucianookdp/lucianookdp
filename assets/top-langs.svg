@@ -8,12 +8,12 @@
   </style>
   <text x="22" y="30" class="title">Most Used Languages</text>
   <rect x="22" y="50" width="476" height="8" rx="4" fill="#21262d" />
-  <rect x="22" y="50" width="274.51" height="8" fill="#3178c6" />
-  <rect x="296.51" y="50" width="93.26" height="8" fill="#f1e05a" />
-  <rect x="389.77" y="50" width="47.28" height="8" fill="#3572A5" />
-  <rect x="437.05" y="50" width="34.8" height="8" fill="#563d7c" />
-  <rect x="471.85" y="50" width="18.48" height="8" fill="#ff5a03" />
-  <rect x="490.33" y="50" width="7.67" height="8" fill="#e34c26" />
+  <rect x="22" y="50" width="274.56" height="8" fill="#3178c6" />
+  <rect x="296.56" y="50" width="93.24" height="8" fill="#f1e05a" />
+  <rect x="389.8" y="50" width="47.26" height="8" fill="#3572A5" />
+  <rect x="437.06" y="50" width="34.79" height="8" fill="#563d7c" />
+  <rect x="471.85" y="50" width="18.47" height="8" fill="#ff5a03" />
+  <rect x="490.32" y="50" width="7.67" height="8" fill="#e34c26" />
   <rect x="22" y="75" width="8" height="8" rx="2" fill="#3178c6" /><text x="38" y="84" class="label"><tspan fill="#e6edf3">TypeScript</tspan> 57.7%</text>
   <rect x="180.67" y="75" width="8" height="8" rx="2" fill="#f1e05a" /><text x="196.67" y="84" class="label"><tspan fill="#e6edf3">JavaScript</tspan> 19.6%</text>
   <rect x="339.33" y="75" width="8" height="8" rx="2" fill="#3572A5" /><text x="355.33" y="84" class="label"><tspan fill="#e6edf3">Python</tspan> 9.9%</text>
