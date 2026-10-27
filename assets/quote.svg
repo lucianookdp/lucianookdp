@@ -7,7 +7,7 @@
     .quote { font-size: 14px; font-weight: 400; fill: #e6edf3; }
   </style>
   <text x="22" y="30" class="title">Quote of the day</text>
-  <text x="22" y="58" class="quote">Simplicity is the ultimate sophistication.</text>
+  <text x="22" y="58" class="quote">Learning never exhausts the mind.</text>
   <text x="22" y="88" class="label">Leonardo da Vinci</text>
-  <text x="498" y="88" class="label" text-anchor="end">day 299 of 365</text>
+  <text x="498" y="88" class="label" text-anchor="end">day 300 of 365</text>
 </svg>
