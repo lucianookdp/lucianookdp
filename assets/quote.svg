@@ -7,7 +7,7 @@
     .quote { font-size: 14px; font-weight: 400; fill: #e6edf3; }
   </style>
   <text x="22" y="30" class="title">Quote of the day</text>
-  <text x="22" y="58" class="quote">The noblest pleasure is the joy of understanding.</text>
+  <text x="22" y="58" class="quote">Where the spirit does not work with the hand, there is no art.</text>
   <text x="22" y="88" class="label">Leonardo da Vinci</text>
-  <text x="498" y="88" class="label" text-anchor="end">day 302 of 365</text>
+  <text x="498" y="88" class="label" text-anchor="end">day 303 of 365</text>
 </svg>
