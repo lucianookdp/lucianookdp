@@ -8,16 +8,16 @@
   </style>
   <text x="22" y="30" class="title">Most Used Languages</text>
   <rect x="22" y="50" width="476" height="8" rx="4" fill="#21262d" />
-  <rect x="22" y="50" width="277.7" height="8" fill="#3178c6" />
-  <rect x="299.7" y="50" width="93.84" height="8" fill="#f1e05a" />
-  <rect x="393.54" y="50" width="47.92" height="8" fill="#3572A5" />
-  <rect x="441.46" y="50" width="31.4" height="8" fill="#563d7c" />
-  <rect x="472.86" y="50" width="17.36" height="8" fill="#ff5a03" />
-  <rect x="490.22" y="50" width="7.78" height="8" fill="#e34c26" />
-  <rect x="22" y="75" width="8" height="8" rx="2" fill="#3178c6" /><text x="38" y="84" class="label"><tspan fill="#e6edf3">TypeScript</tspan> 58.3%</text>
-  <rect x="180.67" y="75" width="8" height="8" rx="2" fill="#f1e05a" /><text x="196.67" y="84" class="label"><tspan fill="#e6edf3">JavaScript</tspan> 19.7%</text>
-  <rect x="339.33" y="75" width="8" height="8" rx="2" fill="#3572A5" /><text x="355.33" y="84" class="label"><tspan fill="#e6edf3">Python</tspan> 10.1%</text>
-  <rect x="22" y="99" width="8" height="8" rx="2" fill="#563d7c" /><text x="38" y="108" class="label"><tspan fill="#e6edf3">CSS</tspan> 6.6%</text>
+  <rect x="22" y="50" width="270.68" height="8" fill="#3178c6" />
+  <rect x="292.68" y="50" width="91.47" height="8" fill="#f1e05a" />
+  <rect x="384.15" y="50" width="50.51" height="8" fill="#3572A5" />
+  <rect x="434.66" y="50" width="30.61" height="8" fill="#563d7c" />
+  <rect x="465.27" y="50" width="16.92" height="8" fill="#ff5a03" />
+  <rect x="482.19" y="50" width="15.81" height="8" fill="#e34c26" />
+  <rect x="22" y="75" width="8" height="8" rx="2" fill="#3178c6" /><text x="38" y="84" class="label"><tspan fill="#e6edf3">TypeScript</tspan> 56.9%</text>
+  <rect x="180.67" y="75" width="8" height="8" rx="2" fill="#f1e05a" /><text x="196.67" y="84" class="label"><tspan fill="#e6edf3">JavaScript</tspan> 19.2%</text>
+  <rect x="339.33" y="75" width="8" height="8" rx="2" fill="#3572A5" /><text x="355.33" y="84" class="label"><tspan fill="#e6edf3">Python</tspan> 10.6%</text>
+  <rect x="22" y="99" width="8" height="8" rx="2" fill="#563d7c" /><text x="38" y="108" class="label"><tspan fill="#e6edf3">CSS</tspan> 6.4%</text>
   <rect x="180.67" y="99" width="8" height="8" rx="2" fill="#ff5a03" /><text x="196.67" y="108" class="label"><tspan fill="#e6edf3">Astro</tspan> 3.6%</text>
-  <rect x="339.33" y="99" width="8" height="8" rx="2" fill="#e34c26" /><text x="355.33" y="108" class="label"><tspan fill="#e6edf3">HTML</tspan> 1.6%</text>
+  <rect x="339.33" y="99" width="8" height="8" rx="2" fill="#e34c26" /><text x="355.33" y="108" class="label"><tspan fill="#e6edf3">HTML</tspan> 3.3%</text>
 </svg>
