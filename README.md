@@ -46,20 +46,6 @@
   <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
 </p>
 
-## Featured projects
-
-<img src="assets/icons/search.svg" width="16" height="16" align="absmiddle" alt="" /> **[cnpj-due-diligence](https://github.com/lucianookdp/cnpj-due-diligence)** &nbsp;·&nbsp; [live demo](https://lucianookdp.github.io/cnpj-due-diligence/)  
-Checks a Brazilian company before you do business with it: ownership graph, official restrictive lists and an explainable risk score.
-
-<img src="assets/icons/split.svg" width="16" height="16" align="absmiddle" alt="" /> **[Rachaí](https://github.com/lucianookdp/rachai-web)** &nbsp;·&nbsp; [live demo](https://userachai.com.br)  
-A group logs shared expenses and gets back the fewest payments needed to settle up. No signup.
-
-<img src="assets/icons/shield.svg" width="16" height="16" align="absmiddle" alt="" /> **[Scammeter](https://github.com/lucianookdp/scammeter)** &nbsp;·&nbsp; [live demo](https://lucianookdp.github.io/scammeter/)  
-Tells you whether a Brazilian site is a scam and why, by cross-checking the company, the domain and the payment key.
-
-<img src="assets/icons/pin.svg" width="16" height="16" align="absmiddle" alt="" /> **[LostAndFound](https://github.com/lucianookdp/LostAndFound)** &nbsp;·&nbsp; [live demo](https://lucianookdp.github.io/LostAndFound/)  
-Lost and found system for schools and universities. My capstone project, with a guided demo.
-
 ## GitHub
 
 <p align="center">
