@@ -121,7 +121,7 @@ const LEGEND_TOP = 84;
 const LEGEND_STEP = 24;
 const LEGEND_COLS = 3;
 
-function topLangsCard(totals) {
+function topLangsCard(totals, minHeight = 0) {
   const sorted = [...totals.entries()].sort((a, b) => b[1] - a[1]).slice(0, 6);
   const total = sorted.reduce((sum, [, bytes]) => sum + bytes, 0);
 
@@ -148,7 +148,7 @@ function topLangsCard(totals) {
     .join("\n  ");
 
   const rows = Math.ceil(sorted.length / LEGEND_COLS);
-  const height = LEGEND_TOP + (rows - 1) * LEGEND_STEP + 16;
+  const height = Math.max(minHeight, LEGEND_TOP + (rows - 1) * LEGEND_STEP + 16);
   return card({
     title: "Most Used Languages",
     width: WIDTH,
@@ -191,7 +191,7 @@ async function loadQuotes() {
   return JSON.parse(raw);
 }
 
-function quoteCard(quote, dayNum, totalDays) {
+function quoteCard(quote, dayNum, totalDays, minHeight = 0) {
   const lineHeight = 22;
   const linhas = wrapText(quote.text, 62);
 
@@ -204,7 +204,8 @@ function quoteCard(quote, dayNum, totalDays) {
     })
     .join("\n  ");
 
-  const rodapeY = y + 8;
+  // The footer sits at the bottom so the card can match the languages card's height.
+  const rodapeY = Math.max(y + 8, minHeight - 18);
   const autor = `<text x="22" y="${rodapeY}" class="label">${escapeXml(quote.author || "Unknown")}</text>`;
   const dia = `<text x="${WIDTH - 22}" y="${rodapeY}" class="label" text-anchor="end">day ${dayNum} of ${totalDays}</text>`;
 
@@ -222,12 +223,18 @@ async function main() {
 
   const fs = await import("node:fs/promises");
   await fs.mkdir("assets", { recursive: true });
-  await fs.writeFile("assets/top-langs.svg", topLangsCard(languageTotals));
-
   const quotes = await loadQuotes();
   const doy = dayOfYear(new Date());
   const quote = quotes[(doy - 1) % quotes.length];
-  await fs.writeFile("assets/quote.svg", quoteCard(quote, doy, quotes.length));
+
+  // The README shows both cards side by side, so they always share one height.
+  const alturaDe = (svg) => Number(svg.match(/height="(\d+)"/)[1]);
+  const altura = Math.max(
+    alturaDe(topLangsCard(languageTotals)),
+    alturaDe(quoteCard(quote, doy, quotes.length)),
+  );
+  await fs.writeFile("assets/top-langs.svg", topLangsCard(languageTotals, altura));
+  await fs.writeFile("assets/quote.svg", quoteCard(quote, doy, quotes.length, altura));
 
   console.log("Generated assets/top-langs.svg and assets/quote.svg");
 }
